@@ -1,1 +1,130 @@
+/* ==========================================================================
+   BANKBUGS|FX CYBER SPLASH SCREEN ENGINE
+   ========================================================================== */
+:root {
+    --bg-pure: #000000;
+    --neon-matrix: #00ff00;
+    --neon-glow: rgba(0, 255, 0, 0.15);
+    --surface-icon: #0a0a0a;
+    --border-dim: #111111;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-pure);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.splash-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 6rem 2rem 4rem 2rem; /* Compact top-to-bottom layout hierarchy */
+}
+
+.splash-identity-engine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin: auto 0; /* Vertical centering lock */
+}
+
+/* Highly detailed App Icon Shell */
+.app-icon-container {
+    width: 88px;
+    height: 88px;
+    background: var(--surface-icon);
+    border: 1px solid var(--border-dim);
+    border-radius: 20px; /* Smooth fintech app geometry */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.02);
+    position: relative;
+    transition: border-color 0.5s ease;
+    animation: iconPulse 3s infinite ease-in-out;
+}
+
+.brand-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+/* Typography Scale */
+.brand-title {
+    font-family: var(--font-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+
+.brand-accent {
+    font-family: var(--font-mono);
+    color: var(--neon-matrix);
+    font-weight: 700;
+}
+
+/* Compressed Loading & Terminal Metrics */
+.terminal-loading-block {
+    width: 100%;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.loading-bar-wrapper {
+    width: 100%;
+    height: 2px; /* Ultra-thin design density */
+    background: #111111;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-bar-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--neon-matrix);
+    box-shadow: 0 0 8px var(--neon-matrix);
+}
+
+.status-terminal-log {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--neon-matrix);
+    opacity: 0.65;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes iconPulse {
+    0%, 100% { border-color: var(--border-dim); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); }
+    50% { border-color: var(--neon-matrix); box-shadow: 0 0 25px var(--neon-glow); }
+}
+
+/* Mobile Scale Compressions */
+@media (max-width: 480px) {
+    .app-icon-container { width: 76px; height: 76px; border-radius: 16px; }
+    .brand-logo { width: 44px; height: 44px; }
+    .brand-title { font-size: 1.6rem; }
+}
