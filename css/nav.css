@@ -131,3 +131,33 @@
     .node-badge { display: none; }
     .nav-menu-tabs { gap: 1rem; }
 }
+
+
+/* ==========================================================================
+   HIGH-CONTRAST NEON GREEN FILLED BUTTON ENGINE
+   ========================================================================== */
+.btn-login.btn-filled {
+    background: var(--primary-neon);
+    color: #000000; /* Pure black text for ultimate readability on neon green */
+    font-weight: 700; /* Extra weight to make the CTA pop */
+    text-decoration: none !important; /* Forces underline to stay completely off */
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid var(--primary-neon);
+}
+
+/* Highly Interactive Hover Matrix for Filled Action Button */
+.btn-login.btn-filled:hover {
+    background: transparent;
+    color: var(--primary-neon);
+    box-shadow: 0 0 15px var(--primary-neon);
+    transform: translateY(-1px);
+    text-decoration: none !important;
+}
+
+.btn-login.btn-filled:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px var(--primary-neon);
+}
+
