@@ -62,15 +62,9 @@
 </nav>
 
 
- <!-- TRADINGVIEW LIVE TICKER TAPE BAR -->
-<div class="ticker-tape-wrapper">
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://tradingview.com" async>
-        {"symbols":[{"proName":"FX_IDC:EURUSD","title":"EUR/USD"},{"proName":"BITSTAMP:BTCUSD","title":"BTC/USD"},{"proName":"FX:USDJPY","title":"USD/JPY"},{"proName":"OANDA:XAUUSD","title":"GOLD"},{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}
-        </script>
-    </div>
+<script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+
+<tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,CMCMARKETS:GOLD,OANDA:GBPUSD,NASDAQ:AAPL,NASDAQ:GOOGL,NASDAQ:NVDA"></tv-ticker-tape>
     <!-- TradingView Widget END -->
 </div>
 
