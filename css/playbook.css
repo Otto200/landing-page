@@ -1,0 +1,157 @@
+/* ==========================================================================
+   BANKBUGS|FX SECTION 4: APP PLAYBOOK TANGIBILITY GRAPHICS
+   ========================================================================== */
+.playbook-preview-section {
+    padding: 5rem 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.playbook-header {
+    margin-bottom: 3.5rem;
+}
+
+.playbook-badge {
+    margin-bottom: 1rem;
+}
+
+/* Smartphone Tri-Grid Real Estate Alignments */
+.phone-preview-matrix {
+    gap: 1.5rem;
+}
+
+.phone-preview-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* Mini Phone Viewport Structuring */
+.smartphone-frame.mini-frame {
+    width: 220px;
+    height: 380px;
+    border: 8px solid #141414;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    background: #000000;
+    transition: border-color 0.25s var(--transition-fast), box-shadow 0.25s var(--transition-fast);
+}
+
+/* Hover Accent on the active phone cards */
+.phone-preview-column:hover .smartphone-frame.mini-frame {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Middle core feature subtle emphasis hook */
+.smartphone-frame.focus-frame {
+    border-color: #222222;
+}
+
+.smartphone-frame.mini-frame .phone-notch {
+    width: 90px;
+    height: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.app-internal-view {
+    padding: 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.app-header-bar {
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 0.4rem;
+}
+
+.neon-pill {
+    font-size: 0.55rem !important;
+    padding: 0.1rem 0.3rem !important;
+    background: rgba(0, 255, 0, 0.05) !important;
+}
+
+/* Internal Graphic Simulation Panels */
+.app-ui-graphic {
+    background: #040404;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Screen 1 Graphic Simulation Elements */
+.blueprint-line {
+    position: absolute;
+    background: rgba(0, 255, 0, 0.1);
+}
+.blueprint-line.vertical { width: 1px; height: 100%; left: 35%; }
+.blueprint-line.horizontal { width: 100%; height: 1px; top: 45%; }
+.blueprint-box-target {
+    margin: auto;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    border: 1px dashed var(--primary-neon);
+    padding: 0.25rem 0.5rem;
+    color: var(--primary-neon);
+    background: rgba(0, 255, 0, 0.05);
+}
+
+/* Screen 2 Risk Calculator Simulation Elements */
+.calc-input-row {
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+    padding-bottom: 0.25rem;
+}
+.calc-output-box {
+    margin-top: auto;
+    background: rgba(0, 255, 0, 0.03);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    padding: 0.5rem 0.25rem;
+    border-radius: 4px;
+}
+.label-xs { font-size: 0.5rem; letter-spacing: 0.02em; }
+.lot-size-big { font-size: 1rem; font-weight: 700; margin-top: 0.15rem; }
+
+/* Screen 3 Session Map Simulation Elements */
+.session-node {
+    background: #080808;
+    border: 1px solid var(--surface-border);
+    padding: 0.4rem;
+    border-radius: 4px;
+}
+.active-session { border-color: rgba(0, 255, 0, 0.2); }
+.pulse-pill { font-size: 0.5rem !important; padding: 0.05rem 0.25rem !important; background: var(--primary-neon) !important; color: #000000 !important; font-weight: 700; }
+.dim-pill { font-size: 0.5rem !important; padding: 0.05rem 0.25rem !important; background: transparent !important; color: var(--text-muted) !important; }
+
+/* Content Typography Block Sizing */
+.preview-text-block {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.preview-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.preview-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE SUB-STATIONS */
+@media (max-width: 576px) {
+    .playbook-preview-section { padding: 3rem 1rem; }
+    .phone-preview-column { gap: 1rem; }
+}
