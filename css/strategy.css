@@ -1,0 +1,155 @@
+/* ==========================================================================
+   SECTION 3: GOLD ENGINE STRATEGY SYSTEM STYLING
+   ========================================================================== */
+.gold-strategy-section {
+    padding: 5rem 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.strategy-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.strategy-badge {
+    align-self: flex-start;
+}
+
+.strategy-body-copy {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    max-width: 540px;
+}
+
+/* Modern Compact Bullet Card Layout Matrix */
+.strategy-bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.strategy-bullet-item {
+    background: #040404 !important;
+    padding: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-radius: 6px;
+    border-left: 2px solid var(--surface-border);
+}
+
+.strategy-bullet-item:hover {
+    border-left-color: var(--primary-neon);
+}
+
+.bullet-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.bullet-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.bullet-text strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Vector Chart Component Canvas Design */
+.chart-execution-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 0.75rem !important;
+    background: #020202 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 6px;
+}
+
+.chart-panel-header {
+    font-size: 0.75rem;
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 0.5rem;
+}
+
+.panel-tag {
+    color: var(--text-muted);
+}
+
+.execution-badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+}
+
+.chart-canvas-area {
+    background: #000000;
+    border: 1px solid var(--surface-border);
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-zone-line {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.chart-zone-line.resistance-zone {
+    border-top: 1px dashed red;
+    opacity: 0.6;
+}
+
+.chart-zone-line.institutional-pool {
+    border-top: 1px dashed var(--primary-neon);
+}
+
+.zone-label {
+    position: absolute;
+    top: -14px;
+    left: 8px;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    background: #000000;
+    padding: 0 4px;
+    color: #ff3333;
+}
+
+.chart-zone-line.institutional-pool .zone-label {
+    color: var(--primary-neon);
+}
+
+.strategy-chart-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* RESPONSIVE LAYOUT FIXES */
+@media (max-width: 992px) {
+    .chart-execution-card { max-width: 100%; }
+    .chart-canvas-area { height: 260px; }
+}
+
+@media (max-width: 576px) {
+    .gold-strategy-section { padding: 3rem 1rem; }
+    .strategy-body-copy { font-size: 0.95rem; }
+    .bullet-text { font-size: 0.9rem; }
+}
