@@ -1,6 +1,7 @@
 /* ==========================================================================
-   LOCKED TOP NAVIGATOR & TICKER CORE ENGINE
+   BANKBUGS|FX LOCKED TOP NAVIGATOR & TICKER ENGINE
    ========================================================================== */
+
 .locked-navigator {
     position: fixed;
     top: 0;
@@ -9,7 +10,7 @@
     z-index: 9999;
     background: rgba(0, 0, 0, 0.95);
     border-bottom: 1px solid var(--surface-border);
-    backdrop-filter: blur(8px); /* Fintech premium frost look */
+    backdrop-filter: blur(8px);
 }
 
 .nav-container {
@@ -19,28 +20,17 @@
     padding: 0 1rem;
 }
 
-/* Tier 1 Grid System */
+/* Tier 1 Layout Alignment (Flipped Orientation) */
 .nav-tier-one {
     padding: 0.5rem 0;
     border-bottom: 1px solid rgba(26, 26, 26, 0.5);
-}
-
-.nav-auth-block {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.btn-sm {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
 }
 
 .nav-brand-block {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    text-align: right;
+    text-align: left; /* Switched text-alignment for the left side */
 }
 
 .nav-brand-text {
@@ -63,7 +53,7 @@
 .nav-logo-container {
     width: 32px;
     height: 32px;
-    border-radius: 6px;
+    border-radius: 6px; /* Moderately rounded icon edges */
     border: 1px solid var(--surface-border);
     overflow: hidden;
     background: var(--surface-dark);
@@ -75,7 +65,19 @@
     object-fit: cover;
 }
 
-/* Tier 2 Menu Tabs */
+.nav-auth-block {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-sm {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.75rem;
+    border-radius: 6px; /* Premium slightly rounded edges */
+}
+
+/* Tier 2 Link Tabs */
 .nav-tier-two {
     padding: 0.4rem 0;
 }
@@ -84,12 +86,12 @@
     display: flex;
     list-style: none;
     gap: 1.5rem;
-    overflow-x: auto; /* Touch-scroll submenus cleanly on tiny screens */
+    overflow-x: auto; /* Clean touch-swipe for menus on phones */
     white-space: nowrap;
 }
 
 .nav-menu-tabs::-webkit-scrollbar {
-    display: none; /* Invisible structural tracks */
+    display: none;
 }
 
 .tab-link {
@@ -108,10 +110,10 @@
     border-bottom: 1px solid var(--primary-neon);
 }
 
-/* TradingView Realtime Strip */
+/* TradingView Realtime Strip Container */
 .ticker-tape-wrapper {
     position: fixed;
-    top: 76px; /* Sits precisely beneath tier-two navigation bounds */
+    top: 76px;
     left: 0;
     width: 100%;
     height: 32px;
@@ -123,12 +125,12 @@
 
 /* Page Layout Spacer Push Engine */
 .main-body-wrapper {
-    margin-top: 108px; /* Safe clearing structural cushion for layout content */
+    margin-top: 108px;
 }
 
 /* NAVIGATOR MOBILE FLEX STATIONS */
 @media (max-width: 576px) {
-    .nav-brand-sub { display: none; } /* Drop small subtitle string to save real estate */
-    .node-badge { font-size: 0.65rem; }
+    .nav-brand-sub { display: none; }
+    .node-badge { display: none; } /* Hides badge on mobile to leave room for the Login button */
     .nav-menu-tabs { gap: 1rem; }
 }
