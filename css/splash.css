@@ -45,7 +45,8 @@ body {
     margin: auto 0; /* Vertical centering lock */
 }
 
-/* Highly detailed App Icon Shell */
+/* Update these two classes in css/splash.css */
+
 .app-icon-container {
     width: 88px;
     height: 88px;
@@ -59,13 +60,20 @@ body {
     position: relative;
     transition: border-color 0.5s ease;
     animation: iconPulse 3s infinite ease-in-out;
+    
+    /* FIX: Clear internal spacing and clip the image to the corners if needed */
+    padding: 0; 
+    overflow: hidden; 
 }
 
 .brand-logo {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
+    /* FIX: Force full width and height coverage */
+    width: 100%;
+    height: 100%;
+    /* Use 'cover' to fill completely, or 'contain' if you just want it maximum size without stretching */
+    object-fit: cover; 
 }
+
 
 /* Typography Scale */
 .brand-title {
