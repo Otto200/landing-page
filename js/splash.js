@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Terminal Status Logs Array for Fintech authenticity
     const statusLogs = [
-        { time: 0, text: "CONNECTING TO SECURE CORE..." },
-        { time: 1000, text: "VERIFYING PROFILING KEYS..." },
-        { time: 2200, text: "DOWNLINK ESTABLISHED // PASS VALIDATION" },
-        { time: 3500, text: "CACHING STRATEGIC BLUEPRINTS..." },
-        { time: 4500, text: "DECRYPTING PROP PLAYBOOK..." }
+        { time: 0, text: "LOADING..." },
+        { time: 1000, text: "VERIFYING USER IP..." },
+        { time: 2200, text: "SECURE CONNECTION ESTABLISHED" },
+        { time: 3500, text: "CACHING TRADING BLUEPRINTS..." },
+        { time: 4500, text: "LOADING PROP PLAYBOOK..." }
     ];
 
     const splashInterval = setInterval(() => {
