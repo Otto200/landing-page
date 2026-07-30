@@ -16,35 +16,31 @@
 </head>
 <body>
 
-    <!-- STICKY TOP NAVIGATOR LAYER -->
+   <!-- ONLY THE NAVIGATION LINK BAR IS LOCKED HERE -->
 <nav class="locked-navigator">
     <div class="nav-container">
         
         
         <div class="nav-tier-one flex-between">
-            
-            <!-- Left Side: Brand Logo & Title Group (Moved to Left) -->
             <div class="nav-brand-block">
                 <div class="nav-logo-container">
                     <img src="img/logo.webp" alt="BankBugs|FX" class="nav-logo-img">
                 </div>
                 <div class="nav-brand-text">
                     <span class="nav-brand-main">BankBugs<span class="text-neon">|FX</span></span>
-                    <span class="nav-brand-sub">PNG TRADING ECOSYSTEM</span>
+                    <span class="nav-brand-sub">USE TRADING ECOSYSTEM</span>
                 </div>
             </div>
 
-            <!-- Right Side: Node ID and Trader Access (Moved to Right) -->
             <div class="nav-auth-block">
                 <span class="status-pill node-badge">
-                    <span class="pulse-dot"></span> Browsing as VISITOR
+                    <span class="pulse-dot"></span> VISITOR_NODE // US_EAST
                 </span>
                 <button class="btn btn-sm btn-login" id="trader-login-btn">Trader Login</button>
             </div>
-
         </div>
 
-        <!-- Tier 2: Menu Tabs Navigation Links (Updated Order) -->
+        <!-- Tier 2: Menu Tabs Navigation Links -->
         <div class="nav-tier-two">
             <ul class="nav-menu-tabs">
                 <li><a href="#home" class="tab-link active">Home</a></li>
@@ -61,24 +57,23 @@
     </div>
 </nav>
 
-
-<script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+<!-- MAIN BODY SCROLL CONTAINER (Everything here moves naturally when scrolling) -->
+<div class="main-body-wrapper">
+    
+    <!-- TRADINGVIEW LIVE TICKER TAPE BAR (Scrolls away with the page) -->
+   <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 
 <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,CMCMARKETS:GOLD,OANDA:GBPUSD,NASDAQ:AAPL,NASDAQ:GOOGL,NASDAQ:NVDA"></tv-ticker-tape>
-    <!-- TradingView Widget END -->
+
+    <!-- SECTION 1: HERO SECTION -->
+    <header class="hero-section container">
+        <!-- (Your existing Hero Grid code) -->
+    </header>
+
+    <!-- FUTURE SECTIONS 2 TO 7 WILL GO DIRECTLY HERE -->
+
 </div>
 
-
-
-    <!-- MAIN BODY CONTENT PUSH BLOCK (Prevents fixed navbar overlapping layout content) -->
-    <div class="main-body-wrapper">
-        
-        <!-- SECTION 1: HERO SECTION -->
-        <header class="hero-section container">
-            <!-- (Your existing Hero Grid code goes here) -->
-        </header>
-
-    </div>
 
 </body>
 </html>
