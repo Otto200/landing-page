@@ -62,30 +62,19 @@
 </nav>
 
 
-    <!-- TRADINGVIEW LIVE TICKER TAPE BAR -->
-    <div class="ticker-tape-wrapper">
-        <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://tradingview.com" async>
-            {
-            "symbols": [
-                { "proName": "FX_IDC:EURUSD", "title": "EUR/USD" },
-                { "proName": "BITSTAMP:BTCUSD", "title": "BTC/USD" },
-                { "proName": "FX:USDJPY", "title": "USD/JPY" },
-                { "proName": "OANDA:XAUUSD", "title": "GOLD" },
-                { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" }
-            ],
-            "showSymbolLogo": true,
-            "colorTheme": "dark",
-            "isTransparent": true,
-            "displayMode": "compact",
-            "locale": "en"
-            }
-            </script>
-        </div>
-        <!-- TradingView Widget END -->
+ <!-- TRADINGVIEW LIVE TICKER TAPE BAR -->
+<div class="ticker-tape-wrapper">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://tradingview.com" async>
+        {"symbols":[{"proName":"FX_IDC:EURUSD","title":"EUR/USD"},{"proName":"BITSTAMP:BTCUSD","title":"BTC/USD"},{"proName":"FX:USDJPY","title":"USD/JPY"},{"proName":"OANDA:XAUUSD","title":"GOLD"},{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}
+        </script>
     </div>
+    <!-- TradingView Widget END -->
+</div>
+
+
 
     <!-- MAIN BODY CONTENT PUSH BLOCK (Prevents fixed navbar overlapping layout content) -->
     <div class="main-body-wrapper">
