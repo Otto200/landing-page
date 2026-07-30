@@ -46,23 +46,26 @@ h1, h2, h3, h4, .card-title {
 /* ==========================================================================
    2. HIGHLY INTERACTIVE UI COMPONENTS (Fintech Engine)
    ========================================================================== */
-
-/* Neon Interactive Buttons */
+/* Update this selector inside css/home.css */
 button, .btn {
-    font-family: var(--font-mono); /* Technical aesthetic for actions */
+    font-family: var(--font-mono);
     background: transparent;
     color: var(--primary-neon);
     border: 1px solid var(--primary-neon);
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0.5rem 1rem; /* Compact padding footprint */
+    padding: 0.5rem 1rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: all 0.15s var(--transition-fast);
+    
+    /* FIX: Prevents sharp edges across all landing page buttons */
+    border-radius: 6px; 
 }
+
 
 /* Button Hover: Atomic Glow & Inverse Fill */
 button:hover, .btn:hover {
