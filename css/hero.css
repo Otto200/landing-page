@@ -1,9 +1,9 @@
 /* ==========================================================================
-   HERO STRUCTURAL COMPONENT STYLING
+   BANKBUGS|FX HERO INTERFACE SPECIFICATION
    ========================================================================== */
 .hero-section {
-    padding: 3rem 1rem 2rem 1rem; /* Highly compact layout breathing room */
-    min-height: 85vh;
+    padding: 4rem 1rem 3rem 1rem; /* Compact data density scaling */
+    min-height: 80vh;
     display: flex;
     align-items: center;
 }
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.25rem; /* Tight compact flow between elements */
+    gap: 1.25rem;
 }
 
 /* Typography Hierarchy */
@@ -28,7 +28,7 @@
     max-width: 520px;
 }
 
-/* Highly Interactive CTA Matrix */
+/* Custom Hero Button Actions Matrix */
 .hero-actions {
     display: flex;
     flex-direction: column;
@@ -41,16 +41,34 @@
     padding: 0.85rem;
     text-align: center;
     font-size: 1rem;
+    text-decoration: none;
+    border-radius: 6px; /* Smooth rounded button parameters */
+    display: block;
 }
 
-.hero-actions .btn-primary {
+.btn-hero-primary {
     background: var(--primary-neon);
-    color: var(--bg-color);
+    color: #000000 !important;
+    font-weight: 700;
+    border: 1px solid var(--primary-neon);
 }
 
-.hero-actions .btn-primary:hover {
+.btn-hero-primary:hover {
+    background: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.btn-hero-secondary {
     background: transparent;
-    color: var(--primary-neon);
+    color: var(--primary-neon) !important;
+    border: 1px solid var(--primary-neon);
+}
+
+.btn-hero-secondary:hover {
+    background: var(--primary-neon) !important;
+    color: #000000 !important;
+    box-shadow: 0 0 15px var(--primary-neon);
 }
 
 .btn-subtext {
@@ -65,14 +83,14 @@
     font-style: italic;
 }
 
-/* Dashboard App Mockup Graphics Engine */
+/* App Terminal UI Mockup */
 .dashboard-mockup {
     height: 100%;
-    min-height: 300px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 4px;
+    border-radius: 6px; /* Perfectly aligned to asset rules */
 }
 
 .mockup-header {
@@ -94,7 +112,7 @@
     padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .metric-row {
@@ -104,10 +122,10 @@
 
 .matrix-numbers {
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
-/* Micro-Pulse Dot Animation */
+/* Micro Status Pulse */
 .pulse-dot {
     width: 6px;
     height: 6px;
@@ -118,8 +136,8 @@
     box-shadow: 0 0 8px var(--primary-neon);
 }
 
-/* RESPONSIVE HERO FIXES */
+/* RESPONSIVE SCALING */
 @media (max-width: 992px) {
     .hero-headline { font-size: 2rem; }
-    .hero-section { padding-top: 1.5rem; }
+    .hero-section { padding-top: 2rem; }
 }
