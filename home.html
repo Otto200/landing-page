@@ -17,46 +17,50 @@
 <body>
 
     <!-- STICKY TOP NAVIGATOR LAYER -->
-    <nav class="locked-navigator">
-        <div class="nav-container">
+<nav class="locked-navigator">
+    <div class="nav-container">
+        
+        
+        <div class="nav-tier-one flex-between">
             
-            
-            <div class="nav-tier-one flex-between">
-                
-                <!-- Left Side: Node ID and Trader Access -->
-                <div class="nav-auth-block">
-                    <span class="status-pill node-badge">
-                        <span class="pulse-dot"></span> VISITOR_NODE // US_EAST
-                    </span>
-                    <button class="btn btn-sm btn-login" id="trader-login-btn">Trader Login</button>
+            <!-- Left Side: Brand Logo & Title Group (Moved to Left) -->
+            <div class="nav-brand-block">
+                <div class="nav-logo-container">
+                    <img src="img/logo.webp" alt="BankBugs|FX" class="nav-logo-img">
                 </div>
-
-                <!-- Right Side: Brand Logo & Title Group -->
-                <div class="nav-brand-block">
-                    <div class="nav-brand-text">
-                        <span class="nav-brand-main">BankBugs<span class="text-neon">|FX</span></span>
-                        <span class="nav-brand-sub">USE TRADING ECOSYSTEM</span>
-                    </div>
-                    <div class="nav-logo-container">
-                        <img src="img/logo.webp" alt="BankBugs|FX" class="nav-logo-img">
-                    </div>
+                <div class="nav-brand-text">
+                    <span class="nav-brand-main">BankBugs<span class="text-neon">|FX</span></span>
+                    <span class="nav-brand-sub">USE TRADING ECOSYSTEM</span>
                 </div>
-
             </div>
 
-            <!-- Tier 2: Menu Tabs Navigation Links -->
-            <div class="nav-tier-two">
-                <ul class="nav-menu-tabs">
-                    <li><a href="#broker" class="tab-link active">Broker</a></li>
-                    <li><a href="#offers" class="tab-link">Offers</a></li>
-                    <li><a href="#ecosystem" class="tab-link">Our Ecosystem</a></li>
-                    <li><a href="#playbook" class="tab-link">Playbook</a></li>
-                    <li><a href="#about" class="tab-link">About</a></li>
-                </ul>
+            <!-- Right Side: Node ID and Trader Access (Moved to Right) -->
+            <div class="nav-auth-block">
+                <span class="status-pill node-badge">
+                    <span class="pulse-dot"></span> VISITOR_NODE // US_EAST
+                </span>
+                <button class="btn btn-sm btn-login" id="trader-login-btn">Trader Login</button>
             </div>
 
         </div>
-    </nav>
+
+        <!-- Tier 2: Menu Tabs Navigation Links (Updated Order) -->
+        <div class="nav-tier-two">
+            <ul class="nav-menu-tabs">
+                <li><a href="#home" class="tab-link active">Home</a></li>
+                <li><a href="#getting-started" class="tab-link">Getting Started</a></li>
+                <li><a href="#broker" class="tab-link">Broker</a></li>
+                <li><a href="#propfirm" class="tab-link">Prop Firm</a></li>
+                <li><a href="#offers" class="tab-link">Offers</a></li>
+                <li><a href="#ecosystem" class="tab-link">Our Ecosystem</a></li>
+                <li><a href="#playbook" class="tab-link">Playbook</a></li>
+                <li><a href="#about" class="tab-link">About</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
 
     <!-- TRADINGVIEW LIVE TICKER TAPE BAR -->
     <div class="ticker-tape-wrapper">
