@@ -1,0 +1,173 @@
+/* ==========================================================================
+   BANKBUGS|FX SECTION 5: ECOSYSTEM VALUE ANCHOR ENGINE
+   ========================================================================== */
+.ecosystem-pricing-section {
+    padding: 5rem 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.ecosystem-header {
+    margin-bottom: 3.5rem;
+}
+
+.ecosystem-badge {
+    margin-bottom: 1rem;
+}
+
+/* Pricing Grid Structural Anchors */
+.pricing-matrix-row {
+    gap: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    padding: 0 !important; /* Clears default card boundaries to allow design overflow control */
+    background: #040404 !important;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-inner-content {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1.75rem;
+}
+
+/* 🌟 Golden Pricing Card Specific Styles */
+.pricing-card.focus-gold-card {
+    border: 1px solid #ffd700; /* Distinct Premium Gold Border Parameter */
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+    background: #060603 !important;
+}
+
+.pricing-card.focus-gold-card:hover {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.15);
+    border-color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.popular-ribbon {
+    background: #ffd700;
+    color: #000000;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.35rem 0;
+    letter-spacing: 0.05em;
+}
+
+/* Card Content Sub-systems */
+.pricing-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price-display {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-neon);
+    line-height: 1;
+}
+
+.focus-gold-card .pricing-price-display {
+    color: #ffd700; /* Match gold highlights */
+}
+
+.currency-tag {
+    font-size: 1.3rem;
+    vertical-align: super;
+}
+
+.price-subtext {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0;
+}
+
+/* Pricing Bullet Typography Engine */
+.pricing-bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex-grow: 1; /* Pushes the buttons below flush to align cards perfectly */
+}
+
+.pricing-bullet-list li {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.check-icon {
+    color: var(--primary-neon);
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+.focus-gold-card .check-icon {
+    color: #ffd700;
+}
+
+.bullet-muted li {
+    color: var(--text-muted);
+}
+
+/* Buttons Mechanics for Pricing Options */
+.pricing-action-block .btn {
+    width: 100%;
+    padding: 0.9rem;
+    text-align: center;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 6px;
+    display: block;
+}
+
+.btn-pricing-gold {
+    background: #ffd700;
+    color: #000000 !important;
+    font-weight: 700;
+    border: 1px solid #ffd700;
+}
+
+.btn-pricing-gold:hover {
+    background: transparent !important;
+    color: #ffd700 !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn-pricing-dark {
+    background: transparent;
+    color: var(--text-muted) !important;
+    border: 1px solid var(--surface-border);
+}
+
+.btn-pricing-dark:hover {
+    background: var(--surface-border) !important;
+    color: #ffffff !important;
+}
+
+/* RESPONSIVE LAYOUT MATRIX SUB-STATIONS */
+@media (max-width: 768px) {
+    .pricing-matrix-row {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ecosystem-pricing-section { padding: 3rem 1rem; }
+    .card-inner-content { padding: 1.5rem 1rem; gap: 1.25rem; }
+    .pricing-price-display { font-size: 1.8rem; }
+    .pricing-bullet-list li { font-size: 0.9rem; }
+}
