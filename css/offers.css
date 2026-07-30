@@ -124,3 +124,56 @@
     .final-subheadline { font-size: 0.95rem; }
     .btn-final-gold { font-size: 0.95rem; padding: 1rem; }
 }
+
+
+
+
+/* ==========================================================================
+   FOOTER LEGAL COMPLIANCE MATRIX STYLING
+   ========================================================================== */
+.site-main-footer {
+    padding: 3rem 1rem 2rem 1rem;
+    border-top: 1px solid var(--surface-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-disclaimer-wrapper {
+    max-width: 850px;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.disclaimer-text {
+    font-size: 0.65rem; /* Highly compact legal-print density */
+    line-height: 1.5;
+    color: #555555; /* Muted dark gray to remain unobtrusive but fully legible */
+    text-align: justify;
+    letter-spacing: 0.01em;
+}
+
+.disclaimer-text strong {
+    color: var(--text-muted); /* Highlights the warning title subtly */
+    font-weight: 700;
+}
+
+.footer-copyright-wrapper {
+    border-top: 1px dashed rgba(26, 26, 26, 0.4);
+    width: 100%;
+    padding-top: 1.25rem;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+/* Mobile Legal Formatting Compression */
+@media (max-width: 576px) {
+    .site-main-footer { padding: 2rem 1rem 1.5rem 1rem; gap: 1rem; }
+    .disclaimer-text { font-size: 0.6rem; text-align: left; }
+}
+
