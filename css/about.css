@@ -1,0 +1,99 @@
+/* ==========================================================================
+   BANKBUGS|FX SECTION 6: ABOUT ME / REGIONAL PRIDE STYLING
+   ========================================================================== */
+.about-pacific-section {
+    padding: 5rem 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.about-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.about-badge {
+    align-self: flex-start;
+}
+
+/* Biographical Narrative Engine Optimization */
+.story-body-engine {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.story-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.6; /* Balanced slightly taller for heavy editorial blocks */
+    color: var(--text-muted);
+}
+
+/* Pull-Quote Styling Parameter */
+.story-paragraph.highlight-quote {
+    color: #ffffff;
+    font-weight: 500;
+    border-left: 2px solid var(--primary-neon);
+    padding-left: 1rem;
+}
+
+/* Transparency Framework Callout */
+.story-paragraph.win-win-callout {
+    background: rgba(0, 255, 0, 0.02);
+    border: 1px dashed var(--surface-border);
+    padding: 1.25rem;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+.story-paragraph.win-win-callout strong {
+    color: var(--primary-neon);
+}
+
+/* 🖼️ Premium Photo Frame Component Configuration */
+.workspace-photo-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 0.5rem !important; /* Data-dense frame look */
+    background: #020202 !important;
+    border-radius: 6px;
+}
+
+.workspace-image-wrapper {
+    width: 100%;
+    aspect-ratio: 6 / 5;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.workspace-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.workspace-card-footer {
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+}
+
+.offline-tag {
+    font-size: 0.65rem !important;
+    padding: 0.15rem 0.4rem !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: var(--text-muted) !important;
+    border-color: var(--surface-border) !important;
+}
+
+/* RESPONSIVE SUB-STATIONS */
+@media (max-width: 992px) {
+    .workspace-photo-card { max-width: 100%; }
+}
+
+@media (max-width: 576px) {
+    .about-pacific-section { padding: 3rem 1rem; }
+    .story-paragraph { font-size: 0.95rem; }
+    .story-paragraph.win-win-callout { padding: 1rem; }
+}
