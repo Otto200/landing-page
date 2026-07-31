@@ -348,7 +348,7 @@
 
 
 
-<!-- SECTION 4: APP PLAYBOOK PREVIEW -->
+<!-- SECTION 4: APP PLAYBOOK PREVIEW (MANUAL CAROUSEL SYSTEM) -->
 <section id="playbook" class="playbook-preview-section container">
     
     <!-- Section Title Matrix -->
@@ -357,111 +357,194 @@
             <span class="pulse-dot"></span> ECOSYSTEM PREVIEW, Complete Trading System-Setup to Execution
         </div>
         <h2 class="section-headline">
-            Inside Your Interactive Gold Playbook App
+            What's included in Our Ecosystem Web Portal & App?
         </h2>
     </div>
 
-    <!-- 3x Smartphone Mockup Display Grid -->
-    <div class="grid-layout phone-preview-matrix">
+    <!-- Interactive Carousel Window Housing -->
+    <div class="carousel-outer-shell">
         
-        <!-- COLUMN 1: Setup Library -->
-        <div class="col-4 phone-preview-column">
-            <!-- Smartphone Shell Frame -->
-            <div class="smartphone-frame mini-frame">
-                <div class="phone-notch"></div>
-                <div class="phone-screen app-internal-view">
-                    <!-- Internal App Interface Element -->
-                    <div class="app-header-bar flex-between">
-                        <span class="font-mono text-xs">[MATRIX_A+]</span>
-                        <span class="status-pill neon-pill">LIBRARY</span>
-                    </div>
-                    <!-- Blueprint Vector Graphic Layout -->
-                    <div class="app-ui-graphic library-graphic">
-                        <div class="blueprint-line vertical"></div>
-                        <div class="blueprint-line horizontal"></div>
-                        <div class="blueprint-box-target">LIQUIDITY HUNT</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Descriptive Text Content Block -->
-            <div class="preview-text-block">
-                <h3 class="preview-title text-neon">The XAUUSD Setup Matrix</h3>
-                <p class="preview-desc text-muted">
-                    Step-by-step visual blueprints of my A+ Gold setups. Know exactly where the banks are hunting liquidity.
-                </p>
-            </div>
-        </div>
+        <!-- Desktop Manual Arrow Controls -->
+        <button class="carousel-control-btn btn-prev" id="playbook-prev-btn" aria-label="Previous System Module">&larr;</button>
+        <button class="carousel-control-btn btn-next" id="playbook-next-btn" aria-label="Next System Module">&rarr;</button>
 
-        <!-- COLUMN 2: Risk Calculator -->
-        <div class="col-4 phone-preview-column">
-            <!-- Smartphone Shell Frame -->
-            <div class="smartphone-frame mini-frame focus-frame">
-                <div class="phone-notch"></div>
-                <div class="phone-screen app-internal-view">
-                    <div class="app-header-bar flex-between">
-                        <span class="font-mono text-xs">[RISK_CALC]</span>
-                        <span class="status-pill neon-pill">LIVE_CALC</span>
-                    </div>
-                    <!-- Live Dynamic Calculator Mockup Interface -->
-                    <div class="app-ui-graphic calculator-graphic">
-                        <div class="calc-input-row flex-between">
-                            <span class="text-xs text-muted">FUNDED ACC</span>
-                            <span class="font-mono text-xs text-neon">$100,000</span>
+        <!-- Main Scrollable Track Viewport -->
+        <div class="carousel-scroll-viewport" id="playbook-carousel-track">
+            
+            <!-- COLUMN 1: Setup Library -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[MATRIX_A+]</span>
+                            <span class="status-pill neon-pill">LIBRARY</span>
                         </div>
-                        <div class="calc-input-row flex-between">
-                            <span class="text-xs text-muted">RISK LIMIT</span>
-                            <span class="font-mono text-xs text-neon">0.50%</span>
-                        </div>
-                        <div class="calc-output-box text-center">
-                            <span class="label-xs text-muted">IC MARKETS LOT SIZE</span>
-                            <div class="font-mono lot-size-big text-neon">12.50 LOTS</div>
+                        <div class="app-ui-graphic library-graphic">
+                            <div class="blueprint-line vertical"></div>
+                            <div class="blueprint-line horizontal"></div>
+                            <div class="blueprint-box-target">LIQUIDITY HUNT</div>
                         </div>
                     </div>
                 </div>
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">The XAUUSD Setup Matrix</h3>
+                    <p class="preview-desc text-muted">
+                        Step-by-step visual blueprints of my A+ Gold setups. Know exactly where the banks are hunting liquidity.
+                    </p>
+                </div>
             </div>
-            <!-- Descriptive Text Content Block -->
-            <div class="preview-text-block">
-                <h3 class="preview-title text-neon">Live Lot-Size Calculator</h3>
-                <p class="preview-desc text-muted">
-                    Input your funded account balance and get your exact IC Markets lot size instantly. Never over-leverage again.
-                </p>
-            </div>
-        </div>
 
-        <!-- COLUMN 3: Daily Watchlist -->
-        <div class="col-4 phone-preview-column">
-            <!-- Smartphone Shell Frame -->
-            <div class="smartphone-frame mini-frame">
-                <div class="phone-notch"></div>
-                <div class="phone-screen app-internal-view">
-                    <div class="app-header-bar flex-between">
-                        <span class="font-mono text-xs">[SESSION_MAP]</span>
-                        <span class="status-pill neon-pill">UPDATES</span>
-                    </div>
-                    <!-- Session Active Interface Indicators -->
-                    <div class="app-ui-graphic session-graphic">
-                        <div class="session-node flex-between active-session">
-                            <span class="font-mono text-xs">LONDON SESSION</span>
-                            <span class="status-pill pulse-pill">ACTIVE</span>
+            <!-- COLUMN 2: Risk Calculator -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame focus-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[RISK_CALC]</span>
+                            <span class="status-pill neon-pill">LIVE_CALC</span>
                         </div>
-                        <div class="session-node flex-between">
-                            <span class="font-mono text-xs">NEW YORK SESSION</span>
-                            <span class="status-pill dim-pill">PENDING</span>
+                        <div class="app-ui-graphic calculator-graphic">
+                            <div class="calc-input-row flex-between">
+                                <span class="text-xs text-muted">FUNDED ACC</span>
+                                <span class="font-mono text-xs text-neon">$100,000</span>
+                            </div>
+                            <div class="calc-input-row flex-between">
+                                <span class="text-xs text-muted">RISK LIMIT</span>
+                                <span class="font-mono text-xs text-neon">0.50%</span>
+                            </div>
+                            <div class="calc-output-box text-center">
+                                <span class="label-xs text-muted">IC MARKETS LOT SIZE</span>
+                                <div class="font-mono lot-size-big text-neon">12.50 LOTS</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">Live Lot-Size Calculator</h3>
+                    <p class="preview-desc text-muted">
+                        Input your funded account balance and get your exact IC Markets lot size instantly. Never over-leverage again.
+                    </p>
+                </div>
             </div>
-            <!-- Descriptive Text Content Block -->
-            <div class="preview-text-block">
-                <h3 class="preview-title text-neon">Daily Session Map</h3>
-                <p class="preview-desc text-muted">
-                    Direct updates pinpointing critical London and New York session key levels before the market moves.
-                </p>
-            </div>
-        </div>
 
-    </div>
-</section>
+            <!-- COLUMN 3: Daily Watchlist -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[SESSION_MAP]</span>
+                            <span class="status-pill neon-pill">UPDATES</span>
+                        </div>
+                        <div class="app-ui-graphic session-graphic">
+                            <div class="session-node flex-between active-session">
+                                <span class="font-mono text-xs">LONDON SESSION</span>
+                                <span class="status-pill pulse-pill">ACTIVE</span>
+                            </div>
+                            <div class="session-node flex-between">
+                                <span class="font-mono text-xs">NEW YORK SESSION</span>
+                                <span class="status-pill dim-pill">PENDING</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">Daily Session Map</h3>
+                    <p class="preview-desc text-muted">
+                        Direct updates pinpointing critical London and New York session key levels before the market moves.
+                    </p>
+                </div>
+            </div>
+
+            <!-- COLUMN 4: NEW ADDED ASSET // Prop Evaluation Dashboard -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[EVAL_TRACK]</span>
+                            <span class="status-pill neon-pill">METRICS</span>
+                        </div>
+                        <div class="app-ui-graphic validation-graphic">
+                            <div class="calc-input-row flex-between">
+                                <span class="text-xs text-muted">TARGET GOAL</span>
+                                <span class="font-mono text-xs text-neon">+$8,000</span>
+                            </div>
+                            <div class="calc-input-row flex-between">
+                                <span class="text-xs text-muted">CURRENT DRAWDOWN</span>
+                                <span class="font-mono text-xs text-neon" style="color: #ff3333;">0.00%</span>
+                            </div>
+                            <div class="calc-output-box text-center" style="background: rgba(0,255,0,0.05);">
+                                <span class="label-xs text-muted">EVALUATION PHASE</span>
+                                <div class="font-mono lot-size-big text-neon">PASSED ✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">Evaluation Tracker</h3>
+                    <p class="preview-desc text-muted">
+                        Monitor your dynamic equity thresholds and daily loss metrics against prop firm parameters in real time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- COLUMN 5: NEW ADDED ASSET // Order-Flow Journal -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[DATA_LOG]</span>
+                            <span class="status-pill neon-pill">JOURNAL</span>
+                        </div>
+                        <div class="app-ui-graphic journal-graphic">
+                            <div class="session-node flex-between active-session">
+                                <span class="font-mono text-xs">XAUUSD BUY M15</span>
+                                <span class="text-neon font-mono text-xs">+R:4.2</span>
+                            </div>
+                            <div class="session-node flex-between active-session">
+                                <span class="font-mono text-xs">XAUUSD SELL H1</span>
+                                <span class="text-neon font-mono text-xs">+R:3.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">Automated Logbook</h3>
+                    <p class="preview-desc text-muted">
+                        Review past liquidation executions, visual trade prints, and mathematical risk multipliers seamlessly.
+                    </p>
+                </div>
+            </div>
+
+                      <!-- COLUMN 6: NEW ADDED ASSET // Live Community Ledger -->
+            <div class="carousel-slide-item phone-preview-column">
+                <div class="smartphone-frame mini-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen app-internal-view">
+                        <div class="app-header-bar flex-between">
+                            <span class="font-mono text-xs">[NODE_ROOM]</span>
+                            <span class="status-pill neon-pill">PACIFIC</span>
+                        </div>
+                        <!-- Live Community Ledger Simulation Panel -->
+                        <div class="app-ui-graphic community-graphic">
+                            <div class="calc-input-row" style="border: none;">
+                                <div class="text-neon label-xs font-mono">TRADER_01_POM //</div>
+                                <div class="text-xs">Setup triggered at London Open. Secure!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Descriptive Text Block for Column 6 -->
+                <div class="preview-text-block">
+                    <h3 class="preview-title text-neon">Pacific Node Chat</h3>
+                    <p class="preview-desc text-muted">
+                        Coordinate execution levels and pass firm evaluations alongside elite, verified traders from the region.
+                    </p>
+                </div>
+            </div> <!-- CLOSING SECTION FOR COLUMN 6 -->
 
 
    <!-- SECTION 5: OUR ECOSYSTEM PRICING ENGINE -->
