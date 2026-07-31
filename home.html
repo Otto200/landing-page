@@ -151,7 +151,7 @@
 
     <!-- FUTURE SECTIONS 2 TO 7 WILL GO DIRECTLY HERE -->
 
-    <!-- SECTION 2: THE PROOF & AUTHORITY FLEX -->
+    <!-- SECTION 2: THE PROOF & AUTHORITY FLEX (INFINITE HORIZONTAL SLIDER) -->
 <section id="getting-started" class="proof-flex-section container">
     
     <!-- Section Header Block -->
@@ -164,42 +164,86 @@
         </h2>
     </div>
 
-    <!-- Interactive Grid Image Row -->
-    <div class="grid-layout proof-image-row">
-        
-        <!-- Column 1: 1st Funded Certificate -->
-        <div class="col-4 card card-clickable proof-card">
-            <div class="proof-image-container">
-                <img src="img/certificate-1.webp" alt="1st Funded Account Certificate" class="proof-img" onerror="this.src='https://placehold.co'">
+    <!-- Infinite Auto-Scrolling Slider Window -->
+    <div class="proof-slider-window">
+        <div class="proof-slider-track">
+            
+            <!-- Card 1: 1st Funded Certificate -->
+            <div class="card card-clickable proof-card">
+                <div class="proof-image-container">
+                    <img src="img/certificate-1.webp" alt="1st Funded Account Certificate" class="proof-img" onerror="this.src='https://placehold.co'">
+                </div>
+                <div class="proof-card-footer flex-between">
+                    <span class="text-muted text-xs">FundedNext</span>
+                    <span class="text-neon text-xs">VERIFIED ✓</span>
+                </div>
             </div>
-            <div class="proof-card-footer flex-between">
-                <span class="text-muted text-xs">FundedNext</span>
-                <span class="text-neon text-xs">VERIFIED ✓</span>
-            </div>
-        </div>
 
-        <!-- Column 2: Withdrawal Receipts Matrix -->
-        <div class="col-4 card card-clickable proof-card focus-glow">
-            <div class="proof-image-container">
-                <img src="img/withdrawal-proof.webp" alt="Verified $250k+ USD Withdrawal Receipts" class="proof-img" onerror="this.src='https://placehold.co+'">
+            <!-- Card 2: Withdrawal Receipts Matrix -->
+            <div class="card card-clickable proof-card focus-glow">
+                <div class="proof-image-container">
+                    <img src="img/withdrawal-proof.webp" alt="Verified Withdrawal Receipts" class="proof-img" onerror="this.src='https://placehold.co'">
+                </div>
+                <div class="proof-card-footer flex-between">
+                    <span class="text-muted text-xs">Live Broker Withdrawal</span>
+                    <span class="text-neon text-xs">$80,000+ USD</span>
+                </div>
             </div>
-            <div class="proof-card-footer flex-between">
-                <span class="text-muted text-xs">Live Broker Withdrawal</span>
-                <span class="text-neon text-xs">$80,000+ USD</span>
-            </div>
-        </div>
 
-        <!-- Column 3: 2nd Funded Certificate -->
-        <div class="col-4 card card-clickable proof-card">
-            <div class="proof-image-container">
-                <img src="img/certificate-2.webp" alt="2nd Funded Account Certificate" class="proof-img" onerror="this.src='https://placehold.co'">
+            <!-- Card 3: 2nd Funded Certificate -->
+            <div class="card card-clickable proof-card">
+                <div class="proof-image-container">
+                    <img src="img/certificate-2.webp" alt="2nd Funded Account Certificate" class="proof-img" onerror="this.src='https://placehold.co'">
+                </div>
+                <div class="proof-card-footer flex-between">
+                    <span class="text-muted text-xs">Top ONE Trader</span>
+                    <span class="text-neon text-xs">VERIFIED ✓</span>
+                </div>
             </div>
-            <div class="proof-card-footer flex-between">
-                <span class="text-muted text-xs">Top ONE Trader</span>
-                <span class="text-neon text-xs">VERIFIED ✓</span>
-            </div>
-        </div>
 
+            <!-- Card 4: New Added Asset (Payout Proof 2) -->
+            <div class="card card-clickable proof-card">
+                <div class="proof-image-container">
+                    <img src="img/withdrawal-proof-2.webp" alt="Additional Payout Records" class="proof-img" onerror="this.src='https://placehold.co'">
+                </div>
+                <div class="proof-card-footer flex-between">
+                    <span class="text-muted text-xs">IC Markets Profit Split</span>
+                    <span class="text-neon text-xs">$45,000+ USD</span>
+                </div>
+            </div>
+
+            <!-- Card 5: New Added Asset (3rd Funded Certificate) -->
+            <div class="card card-clickable proof-card">
+                <div class="proof-image-container">
+                    <img src="img/certificate-3.webp" alt="3rd Funded Account Certificate" class="proof-img" onerror="this.src='https://placehold.co'">
+                </div>
+                <div class="proof-card-footer flex-between">
+                    <span class="text-muted text-xs">FTMO Funded Node</span>
+                    <span class="text-neon text-xs">VERIFIED ✓</span>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 LOOP DUPLICATION ENGINE: Repeat exact 5 cards above to enable gapless scrolling
+                 ========================================================================== -->
+            <div class="card card-clickable proof-card">
+                <div class="proof-image-container"><img src="img/certificate-1.webp" alt="" class="proof-img" onerror="this.src='https://placehold.co'"></div>
+                <div class="proof-card-footer flex-between"><span class="text-muted text-xs">FundedNext</span><span class="text-neon text-xs">VERIFIED ✓</span></div>
+            </div>
+            <div class="card card-clickable proof-card focus-glow"><div class="proof-image-container"><img src="img/withdrawal-proof.webp" alt="" class="proof-img" onerror="this.src='https://placehold.co'"></div>
+                <div class="proof-card-footer flex-between"><span class="text-muted text-xs">Live Broker Withdrawal</span><span class="text-neon text-xs">$80,000+ USD</span></div>
+            </div>
+            <div class="card card-clickable proof-card"><div class="proof-image-container"><img src="img/certificate-2.webp" alt="" class="proof-img" onerror="this.src='https://placehold.co'"></div>
+                <div class="proof-card-footer flex-between"><span class="text-muted text-xs">Top ONE Trader</span><span class="text-neon text-xs">VERIFIED ✓</span></div>
+            </div>
+            <div class="card card-clickable proof-card"><div class="proof-image-container"><img src="img/withdrawal-proof-2.webp" alt="" class="proof-img" onerror="this.src='https://placehold.co'"></div>
+                <div class="proof-card-footer flex-between"><span class="text-muted text-xs">IC Markets Profit Split</span><span class="text-neon text-xs">$45,000+ USD</span></div>
+            </div>
+            <div class="card card-clickable proof-card"><div class="proof-image-container"><img src="img/certificate-3.webp" alt="" class="proof-img" onerror="this.src='https://placehold.co'"></div>
+                <div class="proof-card-footer flex-between"><span class="text-muted text-xs">FTMO Funded Node</span><span class="text-neon text-xs">VERIFIED ✓</span></div>
+            </div>
+
+        </div>
     </div>
 
     <!-- Section Caption Copy Block -->
@@ -210,6 +254,7 @@
     </div>
 
 </section>
+
 
 
 
