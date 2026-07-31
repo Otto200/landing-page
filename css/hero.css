@@ -226,3 +226,52 @@
     .smartphone-frame { width: 240px; height: 480px; }
     .phone-chart-area { height: 230px; }
 }
+
+
+
+/* ==========================================================================
+   SMARTPHONE FRAME SCREENSHOT INTEGRATION REFACTORS
+   ========================================================================== */
+
+/* Set internal view to layout vertically with no blank spaces */
+.phone-screen.screenshot-mode {
+    padding: 1.5rem 0 0 0; /* Clear internal left/right padding so image touches frame borders */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Float headers cleanly above image margins */
+.phone-screen.screenshot-mode .phone-app-header {
+    padding: 0 1rem 0.5rem 1rem;
+    border-bottom: 1px solid var(--surface-border);
+    width: 100%;
+}
+
+/* Dedicated Image Box viewport */
+.phone-image-content-area {
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    background: #020202;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+/* Force chart screenshot image to scale perfectly without distorting */
+.phone-screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Uniformly scales and fills your mobile mockup completely */
+    opacity: 0.9;      /* Blends cleanly with the dark theme architecture */
+}
+
+/* Bottom footnote wrapper spacing */
+.phone-screen.screenshot-mode .phone-app-footer {
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 100%;
+    background: #050505;
+}
