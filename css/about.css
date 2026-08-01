@@ -175,3 +175,10 @@
     :root { var(--about-slide-w): 170px; } /* Scales down width comfortably on mobile displays */
     .about-marquee-window { mask-image: none; -webkit-mask-image: none; }
 }
+
+
+/* Custom variation modifier class for the third tier track */
+.about-marquee-track.tier-three-speed {
+    animation-duration: 32s; /* Slower than tier 1 to generate natural parallax offsets */
+}
+
