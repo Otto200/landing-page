@@ -1,8 +1,8 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 6: DUAL 16:9 AUTO-MARQUEE LAYOUT ENGINE
+   BANKBUGS|FX SECTION 6: STACKED 16:9 INDEPENDENT MARQUEE BLOCKS
    ========================================================================== */
 :root {
-    --about-slide-w: 200px;
+    --about-slide-w: 220px;
     --about-slide-gap: 0.75rem;
     --about-total-slides: 10;
 }
@@ -23,7 +23,7 @@
     align-self: flex-start;
 }
 
-/* Biographical Narrative Layout */
+/* Narrative Copy Layout */
 .story-body-engine {
     display: flex;
     flex-direction: column;
@@ -55,17 +55,23 @@
     color: var(--primary-neon);
 }
 
-/* 🖼️ Advanced Dual-Tier Multi-Image Terminal Shell */
-.dual-marquee-container {
+/* 🧱 Stacked Card Block Group Layout */
+.stacked-marquee-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* Distinct spatial gap separating block 1 from block 2 */
     width: 100%;
     max-width: 520px;
-    background: #020202;
-    border: 1px solid var(--surface-border);
-    padding: 0.75rem;
+}
+
+.marquee-card-block {
+    padding: 0.5rem !important; /* Premium data-dense frame footprint */
+    background: #020202 !important;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    overflow: hidden;
 }
 
 .about-marquee-window {
@@ -73,42 +79,41 @@
     overflow: hidden;
     position: relative;
     border-radius: 4px;
-    /* Clean gradient vignette filters to soften horizontal stream edges */
+    /* Soft gradient edge vignette mask filter */
     mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
 }
 
-/* Unified Moving Train Container Width Calculations */
+/* Combined Slide Track Sizing Train */
 .about-marquee-track {
     display: flex;
     gap: var(--about-slide-gap);
     width: calc((var(--about-slide-w) * var(--about-total-slides) * 2) + (var(--about-slide-gap) * (var(--about-total-slides) * 2 - 1)));
 }
 
-/* Timeline A: Glides Right to Left */
+/* Card 1 Animation Flow */
 .about-marquee-track.right-to-left {
-    animation: aboutMarqueeForward 28s linear infinite;
+    animation: aboutMarqueeForward 25s linear infinite;
 }
 
-/* Timeline B: Glides Left to Right */
+/* Card 2 Animation Flow */
 .about-marquee-track.left-to-right {
-    animation: aboutMarqueeBackward 28s linear infinite;
+    animation: aboutMarqueeBackward 25s linear infinite;
 }
 
-/* Pause animations when hovering anywhere inside the frame block */
-.dual-marquee-container:hover .about-marquee-track {
+/* Hover over an individual card block to pause its timeline natively */
+.marquee-card-block:hover .about-marquee-track {
     animation-play-state: paused;
 }
 
-/* 📺 Premium 16:9 Layout Engine Resolution */
+/* 📺 Cinematic 16:9 Card Aspect Framework */
 .about-slide-169 {
     flex-shrink: 0;
     width: var(--about-slide-w);
-    aspect-ratio: 16 / 9; /* Perfect wide cinematic box specification */
+    aspect-ratio: 16 / 9; /* Strict widescreen layout grid */
     background: #000000;
-    border-radius: 4px;
+    border-radius: 3px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .about-slide-169 img {
@@ -124,7 +129,7 @@
 }
 
 .workspace-card-footer {
-    padding-top: 0.25rem;
+    padding: 0.25rem 0.25rem 0 0.25rem;
 }
 
 .live-feed-tag {
@@ -146,7 +151,7 @@
 }
 
 /* ==========================================================================
-   MARQUEE VECTOR CALCULATION TIMELINES
+   ANIMATION TIMELINE PATH CONFIGS
    ========================================================================== */
 @keyframes aboutMarqueeForward {
     0% { transform: translateX(0); }
@@ -158,15 +163,15 @@
     100% { transform: translateX(0); }
 }
 
-/* RESPONSIVE SCALING FIXES */
+/* RESPONSIVE SUB-STATIONS */
 @media (max-width: 992px) {
-    .dual-marquee-container { max-width: 100%; }
+    .stacked-marquee-group { max-width: 100%; }
 }
 
 @media (max-width: 576px) {
     .about-pacific-section { padding: 3rem 1rem; }
     .story-paragraph { font-size: 0.95rem; }
     .story-paragraph.win-win-callout { padding: 1rem; }
-    :root { --about-slide-w: 160px; } /* Slightly narrower aspect box sizes to flow cleanly on phones */
+    :root { var(--about-slide-w): 170px; } /* Scales down width comfortably on mobile displays */
     .about-marquee-window { mask-image: none; -webkit-mask-image: none; }
 }
