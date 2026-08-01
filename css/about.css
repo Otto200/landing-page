@@ -1,6 +1,12 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 6: ABOUT ME / REGIONAL PRIDE STYLING
+   BANKBUGS|FX SECTION 6: DUAL 16:9 AUTO-MARQUEE LAYOUT ENGINE
    ========================================================================== */
+:root {
+    --about-slide-w: 200px;
+    --about-slide-gap: 0.75rem;
+    --about-total-slides: 10;
+}
+
 .about-pacific-section {
     padding: 5rem 1rem;
     border-top: 1px solid var(--surface-border);
@@ -17,7 +23,7 @@
     align-self: flex-start;
 }
 
-/* Biographical Narrative Engine Optimization */
+/* Biographical Narrative Layout */
 .story-body-engine {
     display: flex;
     flex-direction: column;
@@ -26,11 +32,10 @@
 
 .story-paragraph {
     font-size: 1.05rem;
-    line-height: 1.6; /* Balanced slightly taller for heavy editorial blocks */
+    line-height: 1.6;
     color: var(--text-muted);
 }
 
-/* Pull-Quote Styling Parameter */
 .story-paragraph.highlight-quote {
     color: #ffffff;
     font-weight: 500;
@@ -38,7 +43,6 @@
     padding-left: 1rem;
 }
 
-/* Transparency Framework Callout */
 .story-paragraph.win-win-callout {
     background: rgba(0, 255, 0, 0.02);
     border: 1px dashed var(--surface-border);
@@ -51,49 +55,118 @@
     color: var(--primary-neon);
 }
 
-/* 🖼️ Premium Photo Frame Component Configuration */
-.workspace-photo-card {
+/* 🖼️ Advanced Dual-Tier Multi-Image Terminal Shell */
+.dual-marquee-container {
     width: 100%;
     max-width: 520px;
-    padding: 0.5rem !important; /* Data-dense frame look */
-    background: #020202 !important;
+    background: #020202;
+    border: 1px solid var(--surface-border);
+    padding: 0.75rem;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.workspace-image-wrapper {
+.about-marquee-window {
     width: 100%;
-    aspect-ratio: 6 / 5;
-    background: #000;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    /* Clean gradient vignette filters to soften horizontal stream edges */
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+}
+
+/* Unified Moving Train Container Width Calculations */
+.about-marquee-track {
+    display: flex;
+    gap: var(--about-slide-gap);
+    width: calc((var(--about-slide-w) * var(--about-total-slides) * 2) + (var(--about-slide-gap) * (var(--about-total-slides) * 2 - 1)));
+}
+
+/* Timeline A: Glides Right to Left */
+.about-marquee-track.right-to-left {
+    animation: aboutMarqueeForward 28s linear infinite;
+}
+
+/* Timeline B: Glides Left to Right */
+.about-marquee-track.left-to-right {
+    animation: aboutMarqueeBackward 28s linear infinite;
+}
+
+/* Pause animations when hovering anywhere inside the frame block */
+.dual-marquee-container:hover .about-marquee-track {
+    animation-play-state: paused;
+}
+
+/* 📺 Premium 16:9 Layout Engine Resolution */
+.about-slide-169 {
+    flex-shrink: 0;
+    width: var(--about-slide-w);
+    aspect-ratio: 16 / 9; /* Perfect wide cinematic box specification */
+    background: #000000;
     border-radius: 4px;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-.workspace-img {
+.about-slide-169 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+
+.about-slide-169:hover img {
+    opacity: 1;
 }
 
 .workspace-card-footer {
-    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+    padding-top: 0.25rem;
 }
 
-.offline-tag {
+.live-feed-tag {
     font-size: 0.65rem !important;
     padding: 0.15rem 0.4rem !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    color: var(--text-muted) !important;
-    border-color: var(--surface-border) !important;
+    background: rgba(0, 255, 0, 0.05) !important;
+    color: var(--primary-neon) !important;
+    font-weight: 600;
 }
 
-/* RESPONSIVE SUB-STATIONS */
+.live-dot-pulse {
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-neon);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+    box-shadow: 0 0 6px var(--primary-neon);
+}
+
+/* ==========================================================================
+   MARQUEE VECTOR CALCULATION TIMELINES
+   ========================================================================== */
+@keyframes aboutMarqueeForward {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * (var(--about-slide-w) * var(--about-total-slides) + var(--about-slide-gap) * var(--about-total-slides)))); }
+}
+
+@keyframes aboutMarqueeBackward {
+    0% { transform: translateX(calc(-1 * (var(--about-slide-w) * var(--about-total-slides) + var(--about-slide-gap) * var(--about-total-slides)))); }
+    100% { transform: translateX(0); }
+}
+
+/* RESPONSIVE SCALING FIXES */
 @media (max-width: 992px) {
-    .workspace-photo-card { max-width: 100%; }
+    .dual-marquee-container { max-width: 100%; }
 }
 
 @media (max-width: 576px) {
     .about-pacific-section { padding: 3rem 1rem; }
     .story-paragraph { font-size: 0.95rem; }
     .story-paragraph.win-win-callout { padding: 1rem; }
+    :root { --about-slide-w: 160px; } /* Slightly narrower aspect box sizes to flow cleanly on phones */
+    .about-marquee-window { mask-image: none; -webkit-mask-image: none; }
 }
