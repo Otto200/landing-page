@@ -27,14 +27,14 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: centered;
     overflow: hidden;
 }
 
 .card-inner-content {
     padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: relative;
     height: 100%;
     gap: 1.75rem;
 }
