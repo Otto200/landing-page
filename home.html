@@ -501,9 +501,9 @@
                     <li><span class="check-icon">✓</span> My Exact Trading System. (Verified IC Accounts Only)</li>
                 </ul>
 
-                <!-- High Conversion CTA Button -->
+                <!-- High Conversion CTA Button Connected to #signup -->
                 <div class="pricing-action-block">
-                    <a href="https://icmarkets.com" target="_blank" rel="noopener" class="btn btn-pricing-gold" id="pricing-cta-partner">
+                    <a href="#signup" class="btn btn-pricing-gold signup-trigger" id="pricing-cta-partner" data-broker-url="https://icmarkets.com">
                         Open Broker Account here & Claim Eco-Access
                     </a>
                 </div>
@@ -512,6 +512,31 @@
 
     </div>
 </section>
+
+<!-- ==========================================================================
+   SIGNUP MODAL WINDOW SUBSYSTEM (#signup)
+   ========================================================================== -->
+<div id="signup" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container">
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+            <h3> To Claim Ecosystem Access</h3>
+            <p>Set Up your account First. Use your Active Email, Phone Number and Address on your NID or Passport.</p>
+        </div>
+        <form class="modal-form" id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Terminal Email</label>
+                <input type="email" id="signup-email" placeholder="name@domain.com" required>
+            </div>
+            <button type="submit" class="btn btn-pricing-gold">Initialize Activation</button>
+        </form>
+    </div>
+</div>
+
  
 
 <!-- SECTION 6: ABOUT ME (PACIFIC ALIGNMENT STATION) -->
