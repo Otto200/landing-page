@@ -34,7 +34,7 @@
 .card-inner-content {
     padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
     gap: 1.75rem;
 }
