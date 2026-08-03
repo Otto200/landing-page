@@ -458,7 +458,7 @@
     </div>
 </section>
 
-   <!-- SECTION 5: OUR ECOSYSTEM PRICING ENGINE -->
+  <!-- SECTION 5: OUR ECOSYSTEM PRICING ENGINE -->
 <section id="offers" class="ecosystem-pricing-section container">
     
     <!-- Section Header Matrix -->
@@ -501,9 +501,9 @@
                     <li><span class="check-icon">✓</span> My Exact Trading System. (Verified IC Accounts Only)</li>
                 </ul>
 
-                <!-- High Conversion CTA Button Connected to #signup -->
+                <!-- High Conversion CTA Button Pointing to CSS Target Overlay -->
                 <div class="pricing-action-block">
-                    <a href="#signup" class="btn btn-pricing-gold signup-trigger" id="pricing-cta-partner">
+                    <a href="#signup" class="btn btn-pricing-gold" id="pricing-cta-partner">
                         Open Broker Account here & Claim Eco-Access
                     </a>
                 </div>
@@ -514,26 +514,41 @@
 </section>
 
 <!-- ==========================================================================
-   SIGNUP MODAL WINDOW SUBSYSTEM (#signup)
+   PURE CSS REQUIREMENT MODAL ENGINE (#signup)
    ========================================================================== -->
-<div id="signup" class="modal-overlay" aria-hidden="true">
+<div id="signup" class="modal-overlay">
     <div class="modal-container">
-        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+        <!-- Close button target reverts anchor link back to the offers container section -->
+        <a href="#offers" class="modal-close-btn" aria-label="Close modal">&times;</a>
+        
         <div class="modal-header">
-            <h3> To Claim Ecosystem Access</h3>
-            <p>Set Up your account First. Use your Active Email, Phone Number and Address on your NID or Passport.</p>
+            <h3>Account Pre-Requisites</h3>
+            <p>Verify you have prepared these mandatory institutional assets prior to initializing the global live broker engine.</p>
         </div>
-        <form class="modal-form" id="signup-form">
-            <div class="form-group">
-                <label for="signup-name">Full Name</label>
-                <input type="text" id="signup-name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-                <label for="signup-email">Terminal Email</label>
-                <input type="email" id="signup-email" placeholder="name@domain.com" required>
-            </div>
-            <button type="submit" class="btn btn-pricing-gold">Initialize Activation</button>
-        </form>
+
+        <!-- Verification Checklist -->
+        <ul class="requirements-checklist">
+            <li>
+                <strong class="req-title">1. Legal Identity Documentation (Primary)</strong>
+                <span class="req-desc">A valid PNG National Passport, current Driver's License, or National Identity (NID) Card. Name must match your registration form exactly.</span>
+            </li>
+            <li>
+                <strong class="req-title">2. Verified Proof of Residency</strong>
+                <span class="req-desc">A formal utility statement, corporate letter, or bank ledger document issued in your name within the last 90 days.</span>
+            </li>
+            <li>
+                <strong class="req-title">3. Trading Framework Requirements</strong>
+                <span class="req-desc">Ensure you select a "Raw Spread Account" processing on MetaTrader 4/5 or TradingView with a $200 USD baseline terminal capital.</span>
+            </li>
+        </ul>
+
+        <!-- Redirection Infrastructure -->
+        <div class="modal-redirect-block">
+            <p class="redirect-warning-text">Clicking below safely opens the official IC Markets application pipeline in a separate tab matrix.</p>
+            <a href="https://icmarkets.com" target="_blank" rel="noopener noreferrer" class="btn btn-pricing-gold execution-cta">
+                Proceed to Live Broker Server →
+            </a>
+        </div>
     </div>
 </div>
 
