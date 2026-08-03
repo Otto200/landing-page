@@ -26,7 +26,7 @@
     background: #040404 !important;
     border-radius: 8px;
     display: flex;
-    flex-direction: relative;
+    flex-direction: column;
     position: flex;
     overflow: hidden;
 }
@@ -34,7 +34,7 @@
 .card-inner-content {
     padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
     gap: 1.75rem;
 }
