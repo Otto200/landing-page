@@ -17,7 +17,7 @@
 /* Pricing Grid Structural Anchors */
 .pricing-matrix-row {
     gap: 2rem;
-    max-width: 100%;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -159,13 +159,13 @@
 }
 
 /* RESPONSIVE LAYOUT MATRIX SUB-STATIONS */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .pricing-matrix-row {
         gap: 1.5rem;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 100%) {
     .ecosystem-pricing-section { padding: 3rem 1rem; }
     .card-inner-content { padding: 1.5rem 1rem; gap: 1.25rem; }
     .pricing-price-display { font-size: 1.8rem; }
