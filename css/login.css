@@ -10,24 +10,20 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(8px); /* High-tech glass blur effect */
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    z-index: 9999; /* Ensures overlay sits above all home components */
+    z-index: 9999;
     padding: 1.5rem;
-    
-    /* Interactive Visibility Toggle Engine */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s var(--transition-fast);
 }
 
-/* Visually active modal toggle state */
 .modal-overlay.is-active {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Modal Internal Layout Frame */
 .login-card {
     width: 100%;
     max-width: 420px;
@@ -35,24 +31,20 @@
     border-radius: 8px;
     text-align: center;
     position: relative;
-    
-    /* Animation sliding mechanism */
     transform: translateY(20px);
     transition: transform 0.3s var(--transition-fast), border-color 0.25s var(--transition-fast), box-shadow 0.25s var(--transition-fast);
 }
 
-/* Smooth lift and drop on ignition */
 .modal-overlay.is-active .login-card {
     transform: translateY(0);
 }
 
-/* Close Window Styling Utility */
 .modal-close-btn {
     position: absolute;
     top: 1rem;
     right: 1rem;
     background: transparent;
-    border: none !important; /* Forces standard border wipeout */
+    border: none !important;
     color: var(--text-muted);
     font-size: 1.75rem;
     line-height: 1;
@@ -67,16 +59,42 @@
     transform: none !important;
 }
 
-/* Form Structural Positioning Elements */
-.login-header { margin-bottom: 2.25rem; }
-.login-logo-placeholder {
-    font-family: var(--font-mono);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
+/* ==========================================================================
+   GLOWING LOGO APP ICON ENGINE
+   ========================================================================== */
+.login-header {
+    margin-bottom: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.login-logo-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: var(--surface-dark);
+    border: 1px solid var(--primary-neon);
+    box-shadow: 0 0 15px var(--primary-glow); /* Outer neon ignition halo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 8px;
+    transition: box-shadow 0.3s var(--transition-fast);
+}
+
+/* Active breathing glow when card is hovered */
+.login-card:hover .login-logo-icon {
+    box-shadow: 0 0 25px var(--primary-neon);
+}
+
+.login-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .login-title { font-size: 1.4rem; color: var(--text-main); }
 .flag-icon { display: inline-block; margin-left: 0.25rem; }
 .login-form { margin-bottom: 2rem; }
@@ -108,7 +126,9 @@
     font-size: 0.9rem;
 }
 
-/* Button Layout Scaling Overrides */
+/* ==========================================================================
+   BUTTON INTERACTION RESTRUCTURING
+   ========================================================================== */
 .btn-block {
     display: block;
     width: 100%;
@@ -117,6 +137,7 @@
     text-decoration: none;
 }
 
+/* Primary Access Button (Inherited Master Rule) */
 .btn-primary {
     background: var(--primary-neon);
     color: var(--bg-color);
@@ -130,15 +151,31 @@
     box-shadow: 0 0 20px var(--primary-neon);
 }
 
-.btn-secondary {
-    border-color: var(--surface-border);
-    color: var(--text-muted);
+/* Continue as Visitor: Styled with Green Border System Outline */
+.btn-outline-green {
+    border: 1px solid var(--primary-neon);
+    color: var(--primary-neon);
+    background: transparent;
 }
 
-.btn-secondary:hover {
-    border-color: var(--text-main);
-    color: var(--text-main);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.btn-outline-green:hover {
+    background: rgba(0, 255, 0, 0.05);
+    box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* Claim Free Access: Solid Filled Green Layout Block */
+.btn-filled-green {
+    background: var(--primary-neon);
+    color: var(--bg-color);
+    border: 1px solid var(--primary-neon);
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.btn-filled-green:hover {
+    background: transparent;
+    color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-neon);
 }
 
 /* Navigation Breaks */
