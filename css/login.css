@@ -1,0 +1,180 @@
+/* ==========================================================================
+   MODAL COMPONENT ENGINE (css/login.css)
+   ========================================================================== */
+
+/* Full screen fixed backdrop dimming the homepage */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px); /* High-tech glass blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999; /* Ensures overlay sits above all home components */
+    padding: 1.5rem;
+    
+    /* Interactive Visibility Toggle Engine */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s var(--transition-fast);
+}
+
+/* Visually active modal toggle state */
+.modal-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal Internal Layout Frame */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 3rem 2rem 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    
+    /* Animation sliding mechanism */
+    transform: translateY(20px);
+    transition: transform 0.3s var(--transition-fast), border-color 0.25s var(--transition-fast), box-shadow 0.25s var(--transition-fast);
+}
+
+/* Smooth lift and drop on ignition */
+.modal-overlay.is-active .login-card {
+    transform: translateY(0);
+}
+
+/* Close Window Styling Utility */
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none !important; /* Forces standard border wipeout */
+    color: var(--text-muted);
+    font-size: 1.75rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px;
+}
+
+.modal-close-btn:hover {
+    color: var(--primary-neon) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Form Structural Positioning Elements */
+.login-header { margin-bottom: 2.25rem; }
+.login-logo-placeholder {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+.login-title { font-size: 1.4rem; color: var(--text-main); }
+.flag-icon { display: inline-block; margin-left: 0.25rem; }
+.login-form { margin-bottom: 2rem; }
+.form-group { position: relative; margin-bottom: 1.25rem; }
+
+/* Cyber Terminal Design for Full Name Input Box */
+.form-input {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--surface-border);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    padding: 0.85rem 1rem;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s var(--transition-fast);
+}
+
+.form-input:focus {
+    border-color: var(--primary-neon);
+    background: #000000;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.15);
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+/* Button Layout Scaling Overrides */
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--primary-neon);
+    color: var(--bg-color);
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-neon);
+}
+
+.btn-secondary {
+    border-color: var(--surface-border);
+    color: var(--text-muted);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation Breaks */
+.divider {
+    position: relative;
+    margin: 2rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--surface-dark);
+    padding: 0 0.75rem;
+    z-index: 2;
+}
+
+.inline-or {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: lowercase;
+    margin: 0.75rem 0;
+}
+
+/* ==========================================================================
+   MOBILE SCREEN COMPRESSION
+   ========================================================================== */
+@media (max-width: 576px) {
+    .modal-overlay { padding: 1rem; }
+    .login-card {
+        padding: 2.5rem 1.25rem 2rem;
+        background: var(--surface-dark);
+    }
+    .login-title { font-size: 1.25rem; }
+}
