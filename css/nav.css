@@ -161,3 +161,47 @@
     box-shadow: 0 0 5px var(--primary-neon);
 }
 
+
+
+
+
+
+/* Container adjustment to align items neatly */
+.nav-auth-block {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between the two buttons */
+}
+
+/* Base style for the new Claim button */
+.btn-claim {
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Optional placeholder styles: adjust colors to match your theme */
+    background-color: transparent; 
+    border: 1px solid #fff; 
+    color: #fff;
+}
+
+/* Responsiveness adjustments for smaller devices */
+@media (max-width: 768px) {
+    .btn-claim, .btn-login {
+        font-size: 12px;  /* Scales font down slightly on tablet/mobile */
+        padding: 6px 12px; /* Keeps buttons compact on smaller viewports */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-auth-block {
+        gap: 6px; /* Tighter gap on tiny mobile screens */
+    }
+    .btn-claim {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+}
+
