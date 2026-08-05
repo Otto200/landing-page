@@ -1,0 +1,148 @@
+/* ==========================================================================
+   BANKBUGS|FX SECTION 2: results & INFINITE LOOP AUTO-SLIDER ARCHITECTURE
+   ========================================================================== */
+:root {
+    --card-width: 290px;
+    --card-gap: 1.5rem;
+    --total-cards: 5;
+}
+
+.proof-flex-section {
+    padding: 4rem 1rem;
+    border-top: 1px solid var(--surface-border);
+    overflow: hidden; /* Guards page width bounds against track leakage */
+}
+
+.proof-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.proof-badge {
+    margin-bottom: 1rem;
+}
+
+.section-headline {
+    font-size: 2rem;
+    line-height: 1.3;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 🎞️ Slider Window Mask Frame */
+.proof-slider-window {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2.5rem;
+    /* Soft gradient vignette shadows fading out edges like premium trading platforms */
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+}
+
+/* 🚀 High-Speed Continuous Slider Track Train */
+.proof-slider-track {
+    display: flex;
+    gap: var(--card-gap);
+    width: calc((var(--card-width) * var(--total-cards) * 2) + (var(--card-gap) * (var(--total-cards) * 2 - 1)));
+    animation: infiniteMarquee 25s linear infinite;
+}
+
+/* Pause execution dynamically when user pointer anchors down on a card details view */
+.proof-slider-window:hover .proof-slider-track {
+    animation-play-state: paused;
+}
+
+/* Standard Card Container Components Setup */
+.proof-card {
+    flex-shrink: 0;
+    width: var(--card-width);
+    padding: 0.5rem !important;
+    background: #0a0a0a !important;
+    border: 1px solid var(--surface-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proof-card.focus-glow {
+    border-color: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
+}
+
+.proof-card:hover {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.proof-image-container {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #020202;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.proof-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.2s var(--transition-fast), transform 0.2s var(--transition-fast);
+}
+
+.proof-card:hover .proof-img {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.proof-card-footer {
+    padding: 0.25rem 0.5rem;
+    font-family: var(--font-mono);
+}
+
+.text-xs {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+}
+
+/* Caption Footnotes Block */
+.proof-caption-block {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.proof-caption-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. MATHEMATICAL MARQUEE CALCULATION LOOP (Right to Left Execution)
+   ========================================================================== */
+@keyframes infiniteMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Moves track precisely backward by exactly half of its length (the first 5 items) */
+        transform: translateX(calc(-1 * (var(--card-width) * var(--total-cards) + var(--card-gap) * var(--total-cards))));
+    }
+}
+
+/* RESPONSIVE SCALING FIXES */
+@media (max-width: 992px) {
+    .section-headline { font-size: 1.7rem; }
+    :root { var(--card-width): 260px; } /* Slightly tighter cards on smaller screen states */
+}
+
+@media (max-width: 576px) {
+    .proof-flex-section { padding: 3rem 1rem; }
+    .section-headline { font-size: 1.5rem; }
+    .proof-caption-text { font-size: 0.95rem; }
+    .proof-slider-window { mask-image: none; -webkit-mask-image: none; } /* Drop masks on mobile to maximize viewport hardware rendering speeds */
+}
