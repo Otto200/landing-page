@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 3: RE-ENGINEERED UNIFIED CAROUSEL LAYOUT
+   BANKBUGS|FX SECTION 3: SPECIFIC BANNER CONFIGURATION
    ========================================================================== */
 
 .broker-partner-section {
@@ -15,11 +15,11 @@
     overflow: hidden;
 }
 
-/* 🎢 Pure CSS Scroll-Snap Carousel Mechanism */
+/* 🎢 Fixed Exact 970x250 Banner Aspect-Ratio Engine */
 .broker-carousel-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Clean widescreen slider parameter */
+    aspect-ratio: 970 / 250; /* Perfect dimension calculation */
     border-radius: 6px;
     overflow: hidden;
     border: 1px solid var(--surface-border);
@@ -29,16 +29,9 @@
     display: flex;
     width: 100%;
     height: 100%;
-    overflow-x: auto;
+    overflow-x: hidden; /* Script takes care of routing positioning mechanics */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    /* Hide default browser scrollbars for clean visual appearance */
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
-}
-
-.broker-slides-wrapper::-webkit-scrollbar {
-    display: none; 
 }
 
 .broker-slide {
@@ -53,10 +46,26 @@
 .carousel-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Keeps image crisp without stretching scaling profiles */
 }
 
-/* Indicator Controls System */
+/* JavaScript Hooked Active State Indicator */
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    transition: all 0.2s var(--transition-fast);
+}
+
+.dot-indicator.active-dot, .dot-indicator:hover {
+    background: var(--primary-neon) !important;
+    box-shadow: 0 0 10px var(--primary-neon);
+    transform: scale(1.2);
+}
+
+/* Carousel Navigation Dots Layout Row */
 .carousel-nav-dots {
     position: absolute;
     bottom: 12px;
@@ -66,26 +75,18 @@
     z-index: 5;
 }
 
-.dot-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    transition: all 0.2s var(--transition-fast);
+/* MOBILE PHONE SYSTEM STACK CONSTRAINTS OVERRIDE */
+@media (max-width: 768px) {
+    .broker-carousel-container {
+        aspect-ratio: 970 / 400; /* Makes text inside wider banners legible on mobile */
+    }
 }
 
-.dot-indicator:hover, .broker-slides-wrapper:focus-within .dot-indicator {
-    background: var(--primary-neon);
-    box-shadow: 0 0 8px var(--primary-neon);
-}
-
-/* Screen Scaling Uniform Adapters */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .broker-unified-card {
         padding: 1rem !important;
     }
     .broker-carousel-container {
-        aspect-ratio: 4 / 3; /* More vertical screen space optimization for phones */
+        aspect-ratio: 970 / 500; /* Increases layout breathing room for small touch-displays */
     }
 }
