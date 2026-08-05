@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-PG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BankBugs|FX Terminal Login</title>
+    <!-- Framework Master Core Integration -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <!-- Dedicated Login Engine Overlay Stylesheet -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <!-- Cyber Login Modal Overlay Container -->
+    <!-- The JavaScript instantly adds 'is-active' here to run the screen blurring & fade-in -->
+    <div id="loginModal" class="modal-overlay flex-center" aria-hidden="false">
+        
+        <section class="card login-card">
+            
+            <!-- Close Intercept Trigger -->
+            <button type="button" id="closeLoginModal" class="modal-close-btn" aria-label="Close modal">&times;</button>
+            
+            <!-- Branded Header -->
+            <header class="login-header">
+                <!-- App Icon Wrapper with Glow Styling -->
+                <div class="login-logo-icon">
+                    <img src="img/logo.webp" alt="Trader Logo" class="login-logo-img" onerror="this.src='https://placehold.co|FX'">
+                </div>
+                <h1 class="login-title">Welcome back Traders <span class="flag-icon">🇵🇬</span></h1>
+            </header>
+
+            <!-- One-Step Entry Block -->
+            <form id="ecosystemLoginForm" action="#" method="POST" class="login-form">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="traderName" 
+                        name="traderName" 
+                        class="form-input" 
+                        placeholder="Enter MT5 Account" 
+                        required
+                        autocomplete="on"
+                    >
+                </div>
+                
+                <button type="submit" class="btn btn-block btn-primary">
+                    Access Ecosystem
+                </button>
+            </form>
+
+            <!-- Alternative Navigation Separation -->
+            <div class="divider">
+                <span class="divider-text text-muted">New here?</span>
+            </div>
+
+            <!-- Visitor Actions Stack -->
+            <div class="visitor-actions" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <!-- Green Outlined Variant -->
+                <a href="index.html" class="btn btn-block btn-outline-green" style="text-decoration: none !important;">
+                    Continue as Visitor
+                </a>
+                
+                <div class="inline-or text-muted" style="text-align: center; margin: 0.25rem 0;">or</div>
+                
+                <!-- Green Filled Variant -->
+                <a href="index.html#broker-propfirm" class="btn btn-block btn-filled-green" style="text-decoration: none !important;">
+                    Claim Free Access
+                </a>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Activation Logic Controller -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const overlay = document.getElementById("loginModal");
+            const closeBtn = document.getElementById("closeLoginModal");
+
+            // Triggers immediate screen activation & slide-up animation profiles
+            setTimeout(() => {
+                overlay.classList.add("is-active");
+            }, 50);
+
+            // Returns user to index interface smoothly if close node is pressed
+            closeBtn.addEventListener("click", () => {
+                overlay.classList.remove("is-active");
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 250); // Delay safely loops execution until exit fade completes
+            });
+
+            // Fallback: click backdrop skin area outside layout box to bounce back home
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    closeBtn.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
