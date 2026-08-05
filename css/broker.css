@@ -1,92 +1,102 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 3: SPECIFIC BANNER CONFIGURATION
+   BANKBUGS|FX SECTION 3: CLONED MARQUEE INFINITE TRACK ENGINE
    ========================================================================== */
 
 .broker-partner-section {
     padding: 5rem 0;
     border-top: 1px solid var(--surface-border);
-    background-color: var(--bg-color);
+    overflow: hidden;
 }
 
-.broker-unified-card {
-    padding: 1.5rem !important;
+.broker-header {
+    margin-bottom: 3rem;
+}
+
+.broker-badge {
+    margin-bottom: 1rem;
+}
+
+/* 🌀 Infinite Linear Scrolling Assembly Window */
+.broker-slider-window {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 0;
+    /* Soft edge masks for visual integration */
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.broker-slider-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: brokerMarqueeRun 25s linear infinite;
+}
+
+/* Pause scroll interaction to let users inspect the banner */
+.broker-slider-window:hover .broker-slider-track {
+    animation-play-state: paused;
+}
+
+/* Structural Card Architecture Map */
+.broker-slide-card {
+    width: 500px; /* Scales down layout proportionally for layout composition */
+    padding: 0 !important;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background: #040404 !important;
 }
 
-/* 🎢 Fixed Exact 970x250 Banner Aspect-Ratio Engine */
-.broker-carousel-container {
-    position: relative;
+.broker-image-container {
     width: 100%;
-    aspect-ratio: 970 / 250; /* Perfect dimension calculation */
-    border-radius: 6px;
+    aspect-ratio: 970 / 250; /* Hardcodes your exact banner proportion */
     overflow: hidden;
-    border: 1px solid var(--surface-border);
+    border-bottom: 1px solid var(--surface-border);
 }
 
-.broker-slides-wrapper {
-    display: flex;
+.broker-banner-img {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Script takes care of routing positioning mechanics */
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    object-fit: cover;
 }
 
-.broker-slide {
-    flex: 0 0 100%;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: start;
-    position: relative;
-    background: #040404;
+.broker-card-footer {
+    padding: 0.85rem 1.25rem;
 }
 
-.carousel-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image crisp without stretching scaling profiles */
+/* Special Active State Voltage Glow Overlay */
+.broker-slide-card.focus-glow {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* JavaScript Hooked Active State Indicator */
-.dot-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    transition: all 0.2s var(--transition-fast);
+.text-xs {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
 }
 
-.dot-indicator.active-dot, .dot-indicator:hover {
-    background: var(--primary-neon) !important;
-    box-shadow: 0 0 10px var(--primary-neon);
-    transform: scale(1.2);
+/* MARQUEE ANIMATION FRAME MATRIX */
+@keyframes brokerMarqueeRun {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Translates exactly half width (the original 3 elements structural block length) */
+        transform: translateX(calc(-50% - 0.75rem));
+    }
 }
 
-/* Carousel Navigation Dots Layout Row */
-.carousel-nav-dots {
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    right: 0;
-    gap: 8px;
-    z-index: 5;
-}
-
-/* MOBILE PHONE SYSTEM STACK CONSTRAINTS OVERRIDE */
+/* RESPONSIVE SYSTEM ADAPTERS */
 @media (max-width: 768px) {
-    .broker-carousel-container {
-        aspect-ratio: 970 / 400; /* Makes text inside wider banners legible on mobile */
+    .broker-slide-card {
+        width: 380px; /* Narrows tracking cards slightly on tablet screens */
     }
 }
 
 @media (max-width: 480px) {
-    .broker-unified-card {
-        padding: 1rem !important;
-    }
-    .broker-carousel-container {
-        aspect-ratio: 970 / 500; /* Increases layout breathing room for small touch-displays */
+    .broker-slide-card {
+        width: 290px; /* Safe micro fitment processing for phone displays */
     }
 }
