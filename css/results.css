@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 2: results & INFINITE LOOP AUTO-SLIDER ARCHITECTURE
+   BANKBUGS|FX SECTION 2: RESULTS & INFINITE LOOP AUTO-SLIDER ARCHITECTURE
    ========================================================================== */
 :root {
     --card-width: 290px;
@@ -45,7 +45,9 @@
     display: flex;
     gap: var(--card-gap);
     width: calc((var(--card-width) * var(--total-cards) * 2) + (var(--card-gap) * (var(--total-cards) * 2 - 1)));
-    animation: infiniteMarquee 25s linear infinite;
+    animation: infiniteMarquee 25s linear infinite !important; /* Forces a raw, non-dampened speed path */
+    will-change: transform; /* Hardware accelerates the track directly on GPUs to remove browser latency */
+    scroll-behavior: auto !important; /* Kills browser default dampening overhead completely */
 }
 
 /* Pause execution dynamically when user pointer anchors down on a card details view */
@@ -64,7 +66,8 @@
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 6px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    /* Removed heavy ease transitions and made color shifts instant */
+    transition: border-color 0.1s linear, box-shadow 0.1s linear; 
 }
 
 .proof-card.focus-glow {
@@ -90,13 +93,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.85;
-    transition: opacity 0.2s var(--transition-fast), transform 0.2s var(--transition-fast);
+    opacity: 0.95; /* Increased base visibility to bypass heavy opacity calculations */
+    transition: none !important; /* REMOVED transition-fast dampening for instantaneous snap responses */
 }
 
 .proof-card:hover .proof-img {
     opacity: 1;
-    transform: scale(1.02);
+    transform: scale(1.01); /* Reduced scaling amplitude to maintain perfect continuous track balance */
 }
 
 .proof-card-footer {
@@ -137,7 +140,8 @@
 /* RESPONSIVE SCALING FIXES */
 @media (max-width: 992px) {
     .section-headline { font-size: 1.7rem; }
-    :root { var(--card-width): 260px; } /* Slightly tighter cards on smaller screen states */
+    /* FIXED CSS VARIABLE SYNTAX ERROR TO STABILIZE RESPONSIVE SMOOTHNESS */
+    :root { --card-width: 260px; } 
 }
 
 @media (max-width: 576px) {
