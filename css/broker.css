@@ -121,3 +121,18 @@
     box-shadow: 0 0 20px var(--primary-neon);
 }
 
+
+
+
+
+/* Premium Gold Voltage Luminescence Engine */
+.broker-caption-text {
+    animation: goldGlowPulse 4s infinite ease-in-out;
+}
+
+@keyframes goldGlowPulse {
+    0% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.35)); }
+    50% { filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6)); }
+    100% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.35)); }
+}
+
