@@ -100,3 +100,24 @@
         width: 290px; /* Safe micro fitment processing for phone displays */
     }
 }
+
+
+
+/* Forces absolute text underline suppression inside the button tracking */
+.btn-broker-action {
+    text-decoration: none !important;
+}
+
+/* Filled state stability modifications */
+.btn-broker-action.active-filled {
+    background-color: var(--primary-neon) !important;
+    color: var(--bg-color) !important;
+    text-decoration: none !important;
+}
+
+.btn-broker-action.active-filled:hover {
+    background-color: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 20px var(--primary-neon);
+}
+
