@@ -262,83 +262,51 @@
             </p>
         </div>
 
-        <!-- Technical Specification Grid -->
-        <div class="grid-layout broker-matrix-grid">
-            
-            <!-- Left Infrastructure Meta Panel: Key Value Metrics -->
-            <div class="col-4 broker-meta-panel">
-                <div class="card broker-brand-card flex-center">
-                    <!-- Clean minimal brand placeholder: replace with an official logo or styled text -->
-                    <div class="broker-logo-wrap">
-                        <span class="ic-text-brand">IC</span><span class="text-neon">MARKETS</span>
+              <!-- Streamlined Single Card Broker Container -->
+        <div class="broker-single-card-wrapper" style="max-width: 600px; margin: 0 auto;">
+            <div class="card broker-unified-card">
+                
+                <!-- Pure CSS 3-Image Carousel Engine -->
+                <div class="broker-carousel-container">
+                    <div class="broker-slides-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="broker-slide" id="b-slide-1">
+                            <img src="img/broker-slide1.webp" alt="IC Markets Execution Dashboard" class="carousel-img" onerror="this.src='https://placehold.co'">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="broker-slide" id="b-slide-2">
+                            <img src="img/broker-slide2.webp" alt="Equinix NY4 Low Latency Servers" class="carousel-img" onerror="this.src='https://placehold.co'">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="broker-slide" id="b-slide-3">
+                            <img src="img/broker-slide3.webp" alt="PNG Secure Liquidity Withdrawal Route" class="carousel-img" onerror="this.src='https://placehold.co'">
+                        </div>
                     </div>
-                    <div class="partner-stamp-tag">OFFICIAL PORTAL PARTNER</div>
-                </div>
-
-                <div class="card broker-cta-card">
-                    <h3 class="panel-inner-heading">Direct Deployment</h3>
-                    <p class="text-muted panel-inner-desc">
-                        Create an optimized retail live account mapped directly to the BankBugs|FX ecosystem routing table.
-                    </p>
-                    <div class="broker-action-wrapper">
-                        <a href="https://your-icmarkets-partner-link" target="_blank" class="btn btn-broker-deploy">
-                            Open Live Account
-                        </a>
-                        <a href="#offers" class="broker-anchor-link">View Free Ecosystem Access Steps &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Infrastructure Feature Cards (Spans 8 columns on PC, scales down on Mobile) -->
-            <div class="col-8 broker-specs-panel">
-                <div class="grid-layout specs-sub-grid">
                     
-                    <!-- Spec 1: Tight Raw Spreads -->
-                    <div class="card spec-metric-card">
-                        <div class="spec-icon-header flex-between">
-                            <span class="spec-tech-label">SPREAD MATRIX</span>
-                            <span class="spec-live-data">FROM 0.0 PIPS</span>
-                        </div>
-                        <h4 class="spec-title">True Raw Spreads</h4>
-                        <p class="text-muted spec-details">
-                            Direct tier-one liquidity access with institutional spreads. Absolute bare minimum execution overhead on high-frequency majors and Gold (XAUUSD).
-                        </p>
+                    <!-- Carousel Navigation Dots -->
+                    <div class="carousel-nav-dots flex-center">
+                        <a href="#b-slide-1" class="dot-indicator"></a>
+                        <a href="#b-slide-2" class="dot-indicator"></a>
+                        <a href="#b-slide-3" class="dot-indicator"></a>
+                    </div>
+                </div>
+
+                <!-- Strategic Conversion Description Body -->
+                <div class="broker-card-body-content" style="padding: 1.5rem 0 0 0; text-align: center;">
+                    <div class="broker-brand-title-wrap" style="margin-bottom: 1rem;">
+                        <span class="ic-text-brand" style="font-weight: 800; font-size: 1.5rem; color:#fff;">IC</span><span class="text-neon" style="font-weight: 800; font-size: 1.5rem;">MARKETS</span>
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; letter-spacing: 0.05em;">PREMIUM SPONSOR INFRASTRUCTURE</div>
                     </div>
 
-                    <!-- Spec 2: Ultra Low Latency Execution -->
-                    <div class="card spec-metric-card">
-                        <div class="spec-icon-header flex-between">
-                            <span class="spec-tech-label">LATENCY PROFILE</span>
-                            <span class="spec-live-data">&lt; 1.0 MS</span>
-                        </div>
-                        <h4 class="spec-title">Equinix NY4 Server Speed</h4>
-                        <p class="text-muted spec-details">
-                            Orders are filled directly via lightning-fast optical fiber connections straight to global investment banking desks. Built specifically for scalpers and algorithmic EA bots.
-                        </p>
-                    </div>
+                    <p class="text-muted" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
+                        Sign up specifically to this broker using our authorized link to claim 100% free ecosystem access. Get access to our live XAUUSD setups, advanced trading models, and platform tools with zero out-of-pocket costs.
+                    </p>
 
-                    <!-- Spec 3: Flexible Leverage & Deep Capital Access -->
-                    <div class="card spec-metric-card">
-                        <div class="spec-icon-header flex-between">
-                            <span class="spec-tech-label">LEVERAGE ENGINE</span>
-                            <span class="spec-live-data">UP TO 1:500</span>
-                        </div>
-                        <h4 class="spec-title">Dynamic Capital Scale</h4>
-                        <p class="text-muted spec-details">
-                            Fully adjustable margin flexibility designed to handle multi-lot scalp entries, precise position hedging, and rapid prop firm style target expansion.
-                        </p>
-                    </div>
-
-                    <!-- Spec 4: Safe Local Routing for PNG -->
-                    <div class="card spec-metric-card">
-                        <div class="spec-icon-header flex-between">
-                            <span class="spec-tech-label">BANKING ROUTE</span>
-                            <span class="spec-live-data">PNG REVENUE READY</span>
-                        </div>
-                        <h4 class="spec-title">Verified PNG Local Clearances</h4>
-                        <p class="text-muted spec-details">
-                            Tested methods for seamless wire transfers and digital wallet processing across PNG banks. Safely manage multi-thousand dollar withdrawals without platform locks.
-                        </p>
+                    <!-- Deployment Action Link -->
+                    <div class="broker-action-block">
+                        <a href="https://your-icmarkets-partner-link" target="_blank" class="btn btn-broker-deploy" style="width: 100%; display: block; padding: 0.9rem; text-align: center; font-weight: 600;">
+                            Open IC Account
+                        </a>
                     </div>
 
                 </div>
