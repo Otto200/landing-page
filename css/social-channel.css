@@ -293,3 +293,80 @@
     box-shadow: 0 0 8px var(--primary-neon) !important;
 }
 
+
+
+/* ==========================================================================
+   INSTITUTIONAL 3-COLUMN SOCIAL MATRIX LAYOUT ENFORCEMENTS
+   ========================================================================== */
+
+/* Structural Container Optimization */
+.social-matrix-row-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 perfect symmetrical blocks */
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Card layout column flexibility blocks */
+.social-block-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 220px;
+    background: var(--surface-dark);
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.column-header-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.column-block-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.column-block-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.nested-link-stack,
+.pricing-action-block {
+    width: 100%;
+    margin-top: auto; /* Pin button alignments uniformly across cards */
+}
+
+/* TABLET SYSTEM SCALING RULES (Collapses into 2-columns with bottom card stretching) */
+@media (max-width: 992px) {
+    .social-matrix-row-three {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .network-facebook-stack {
+        grid-column: span 2; /* Stretches the FB card nicely across full layout on tablets */
+    }
+}
+
+/* MOBILE PHONE SYSTEM SCALING RULES (Stacks linearly into full-width cards) */
+@media (max-width: 576px) {
+    .social-matrix-row-three {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 1rem;
+    }
+    .network-facebook-stack {
+        grid-column: span 1;
+    }
+    .social-block-column {
+        padding: 1.25rem;
+        min-height: auto;
+    }
+}
+
