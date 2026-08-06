@@ -5,7 +5,7 @@
     padding: 6rem 1rem;
     position: relative;
     border-top: 1px solid var(--surface-border);
-    overflow: hidden; /* Prevents container layout spilling out */
+    overflow: hidden;
 }
 
 .playbook-header {
@@ -42,24 +42,29 @@
     font-weight: 600;
 }
 
-/* 🏎️ Flexible Carousel Track Wrapper */
+/* 🏎️ Flexible Carousel Window Infrastructure wrapper */
+.carousel-outer-shell {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem; 
+}
+
+/* Horizontal Viewport Container */
 .preview-carousel-viewport {
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    
-    /* Hardware accelerated mobile friction snapping */
-    scroll-snap-type: x mandatory; 
-    padding: 1.5rem 1rem;
-    
-    /* Hide native scrolls across layout setups */
+    scroll-snap-type: x mandatory; /* Premium mobile touch snapping friction */
+    padding: 1.5rem 0.5rem;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
 }
 
 .preview-carousel-viewport::-webkit-scrollbar {
-    display: none; /* Chrome/Safari/Opera */
+    display: none; /* Chrome/Safari */
 }
 
 /* 📱 Responsive Sizing Rules per Screen State */
@@ -91,12 +96,54 @@
     }
     .preview-carousel-viewport {
         gap: 1rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .carousel-outer-shell {
+        padding: 0; /* Clear desktop spacer rules inside phones */
     }
     .section-headline {
         font-size: 1.85rem;
     }
+}
+
+/* 🕹️ Manual Clicking Desktop Arrows (Hooks completely into main.css parameters) */
+.carousel-control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid var(--surface-border);
+    color: var(--primary-neon);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s var(--transition-fast);
+    font-family: var(--font-mono);
+}
+
+.carousel-control-btn:hover {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 10px var(--primary-glow);
+    background: var(--primary-neon);
+    color: #000000;
+}
+
+.carousel-control-btn:active { 
+    transform: translateY(-50%) scale(0.95); 
+}
+
+.carousel-control-btn.btn-prev { left: 0; }
+.carousel-control-btn.btn-next { right: 0; }
+
+@media (max-width: 600px) {
+    .carousel-control-btn { display: none; } /* Hide layout track controls on native touch interfaces */
 }
 
 /* Internal Card Element Layout Mechanics */
