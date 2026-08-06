@@ -1,372 +1,109 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 8: INSTITUTIONAL SOCIAL EMBED ENGINE
+   CLEAN VERTICAL ICON STACK BAR (CENTERED OVERRIDE LOGIC)
    ========================================================================== */
 .social-follow-section {
     padding: 5rem 1rem;
-    border-top: 1px solid var(--surface-border);
+    position: relative;
 }
 
-.social-header { margin-bottom: 3.5rem; }
-.social-badge { margin-bottom: 1rem; }
-
-/* Grid Setup */
-.social-matrix-row-three {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1100px;
-    margin: 0 auto;
+.social-header {
+    margin-bottom: 3rem;
 }
 
-/* Master Cards System */
-.social-block-column {
-    padding: 1.5rem !important;
-    background: #040404 !important;
-    border: 1px solid var(--surface-border);
-    border-radius: 6px;
+/* Row container center mechanics */
+.clean-social-links-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; /* Spacious premium gaps across desktop viewports */
+    width: 100%;
+    max-width: 960px;
+    margin: 2rem auto 0 auto;
+}
+
+/* Centered link icon component */
+.minimal-social-icon-link {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1.5rem;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s var(--transition-fast), border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.column-header-group { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; }
-.column-block-title { font-size: 1.35rem; font-weight: 600; }
-.column-block-desc { font-size: 0.9rem; line-height: 1.4; color: var(--text-muted); }
-.column-block-footer { border-top: 1px dashed var(--surface-border); padding-top: 0.75rem; font-family: var(--font-mono); text-align: left; }
-
-/* Institutional SVG Mechanics */
-.svg-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.svg-arrow {
-    width: 14px;
-    height: 14px;
-    color: var(--text-muted);
-    transition: transform 0.15s var(--transition-fast), color 0.15s ease;
-}
-
-.svg-btn-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    flex-shrink: 0;
-}
-
-/* Link List Modifications */
-.nested-link-stack { display: flex; flex-direction: column; gap: 0.5rem; }
-
-.nested-social-row {
-    text-decoration: none !important;
-    background: #000000;
-    border: 1px solid var(--surface-border);
-    padding: 0.85rem 1rem;
-    border-radius: 4px;
-    color: #ffffff;
-    font-size: 0.95rem;
-    transition: all 0.15s var(--transition-fast);
-}
-
-.nested-social-row:hover {
-    border-color: var(--primary-neon);
-    background: rgba(0, 255, 0, 0.02);
-    transform: translateX(2px);
-}
-
-.nested-social-row:hover .svg-arrow {
-    color: var(--primary-neon);
-    transform: translateX(2px);
-}
-
-.handle-text { font-size: 0.75rem; margin-left: 0.5rem; font-family: var(--font-mono); }
-
-/* Broadcast Display Component */
-.broadcast-alert-display-box { background: #000000; border: 1px solid var(--surface-border); padding: 1.25rem 0.5rem; border-radius: 4px; }
-.live-ticker-alert { font-size: 0.85rem; font-weight: 700; margin-top: 0.25rem; }
-
-.btn-broadcast-action {
-    width: 100%;
-    padding: 0.85rem !important;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 6px;
-    background: transparent;
-    color: var(--primary-neon) !important;
-    border: 1px solid var(--primary-neon);
-}
-.btn-broadcast-action:hover {
-    background: var(--primary-neon) !important;
-    color: #000000 !important;
-    box-shadow: 0 0 15px var(--primary-glow);
-}
-
-/* 👑 Premium Gold Hardware App Shell Override */
-.social-block-column.ecosystem-app-focus-card {
-    padding: 0 !important;
-    border-color: #ffd700;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
-    background: #060603 !important;
-}
-
-.app-focus-inner-padding { padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 1rem; }
-.app-featured-ribbon { background: #ffd700; color: #000000; font-size: 0.65rem; font-weight: 700; text-align: center; padding: 0.35rem 0; letter-spacing: 0.05em; }
-
-/* 📱 Hardware App Shell Container UI */
-.hardware-app-shell {
-    width: 100%;
-    height: 100px;
-    background: #000000;
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 6px;
-    padding: 0.5rem;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
-}
-
-.mini-app-screen {
-    width: 100%;
-    height: 100%;
-    background: #020202;
-    border: 1px solid #111111;
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-}
-
-.mini-notch {
-    width: 50px;
-    height: 6px;
-    background: #111111;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.mini-screen-content {
-    height: 100%;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.mini-logo-container {
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    border: 1px solid #1a1a1a;
-    overflow: hidden;
-}
-
-.mini-logo-img { width: 100%; height: 100%; object-fit: cover; }
-.mini-app-title { font-size: 0.8rem; font-weight: 700; letter-spacing: -0.01em; color: #ffffff; }
-
-.btn-ecosystem-app-gold {
-    width: 100%;
-    padding: 0.85rem !important;
-    font-size: 0.9rem;
-    text-decoration: none;
-    border-radius: 6px;
-    background: #ffd700;
-    color: #000000 !important;
-    font-weight: 700;
-    border: 1px solid #ffd700;
-}
-.btn-ecosystem-app-gold:hover { background: transparent !important; color: #ffd700 !important; box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
-
-/* Interactive Hover Actions */
-.social-block-column:hover { transform: translateY(-2px); }
-.public-social-stack:hover, .broadcasting-alert-node:hover { border-color: var(--primary-neon); box-shadow: 0 0 20px var(--primary-glow); }
-.ecosystem-app-focus-card:hover { box-shadow: 0 0 25px rgba(255, 215, 0, 0.15); }
-.live-dot-pulse { width: 5px; height: 5px; background-color: var(--primary-neon); border-radius: 50%; display: inline-block; margin-right: 4px; box-shadow: 0 0 6px var(--primary-neon); }
-
-/* Responsive Settings */
-@media (max-width: 992px) {
-    .social-matrix-row-three { grid-template-columns: repeat(2, 1fr); }
-    .ecosystem-app-focus-card { grid-column: span 2; }
-}
-@media (max-width: 576px) {
-    .social-follow-section { padding: 3rem 1rem; }
-    .social-matrix-row-three { grid-template-columns: 1fr; gap: 1rem; }
-    .ecosystem-app-focus-card { grid-column: span 1; }
-    .app-focus-inner-padding { padding: 1rem; }
-}
-
-
-
-/* ==========================================================================
-   HIGHLY INTERACTIVE GREEN FILLED ACTION BUTTON OVERRIDES
-   ========================================================================== */
-
-/* Variant 1: Filled TikTok Row Button Link */
-.nested-social-row.filled-social-btn {
-    background: var(--primary-neon) !important;
-    color: var(--bg-color) !important; /* Forces high-contrast deep black text readability */
-    padding: 0.85rem 1.25rem;
-    border-radius: 6px;
-    border: 1px solid var(--primary-neon);
-    transition: all 0.15s var(--transition-fast);
-    box-shadow: 0 4px 15px var(--primary-glow);
-}
-
-.nested-social-row.filled-social-btn .handle-text {
-    color: rgba(0, 0, 0, 0.6) !important; /* Clean contrast adaptation for handle track text */
-    margin-left: 6px;
-}
-
-.nested-social-row.filled-social-btn .svg-icon {
-    fill: var(--bg-color) !important;
-}
-
-.nested-social-row.filled-social-btn .svg-arrow {
-    stroke: var(--bg-color) !important;
-}
-
-/* Hover Inverse Action States */
-.nested-social-row.filled-social-btn:hover {
-    background: transparent !important;
-    color: var(--primary-neon) !important;
-    box-shadow: 0 0 20px var(--primary-neon) !important;
-    transform: translateY(-2px);
-}
-
-.nested-social-row.filled-social-btn:hover .handle-text {
-    color: var(--text-muted) !important;
-}
-
-.nested-social-row.filled-social-btn:hover .svg-icon {
-    fill: var(--primary-neon) !important;
-}
-
-.nested-social-row.filled-social-btn:hover .svg-arrow {
-    stroke: var(--primary-neon) !important;
-}
-
-
-/* Variant 2: Filled WhatsApp Broadcast Anchor Button */
-.btn-broadcast-action.filled-whatsapp-btn {
-    background: var(--primary-neon) !important;
-    color: var(--bg-color) !important;
-    font-weight: 600 !important;
-    border-color: var(--primary-neon) !important;
-    box-shadow: 0 4px 15px var(--primary-glow) !important;
-    width: 100%;
-    padding: 0.85rem 1.5rem !important;
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 14px; /* Crisp distance spacing directly between vector and text layer */
     text-decoration: none;
+    color: var(--text-muted);
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    min-width: 150px;
+    transition: all 0.2s var(--transition-fast);
 }
 
-.btn-broadcast-action.filled-whatsapp-btn .svg-btn-icon {
-    fill: var(--bg-color) !important;
-    width: 18px;
-    height: 18px;
+.social-vector-icon {
+    width: 32px; /* Prominent vector branding size scale */
+    height: 32px;
+    fill: var(--text-muted);
+    transition: fill 0.2s var(--transition-fast), transform 0.2s var(--transition-fast);
 }
 
-/* Hover Inverse Action States */
-.btn-broadcast-action.filled-whatsapp-btn:hover {
-    background: transparent !important;
-    color: var(--primary-neon) !important;
-    box-shadow: 0 0 20px var(--primary-neon) !important;
-    transform: translateY(-2px);
+/* Single Text Layer Style Alignment */
+.social-platform-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.btn-broadcast-action.filled-whatsapp-btn:hover .svg-btn-icon {
-    fill: var(--primary-neon) !important;
+.social-platform-name {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
-/* Universal Touch Tapping Compression Rules */
-.nested-social-row.filled-social-btn:active,
-.btn-broadcast-action.filled-whatsapp-btn:active {
+/* ⚡ INTENSE HIGH-RESPONSE HOVER RADIAL GREEN FILLED STATE */
+.minimal-social-icon-link:hover {
+    background-color: var(--primary-neon) !important;
+    color: var(--bg-color) !important; /* Inverts typography to crisp pure black contrast */
+    box-shadow: 0 0 25px var(--primary-glow);
+    transform: translateY(-4px);
+}
+
+.minimal-social-icon-link:hover .social-vector-icon {
+    fill: var(--bg-color) !important; /* Forces vector shape into pure black contrast matching text */
+    transform: scale(1.08);
+}
+
+/* Physical Screen Tapping State Action */
+.minimal-social-icon-link:active {
     transform: translateY(1px);
-    box-shadow: 0 0 8px var(--primary-neon) !important;
+    box-shadow: 0 0 10px var(--primary-neon);
 }
-
-
 
 /* ==========================================================================
-   INSTITUTIONAL 3-COLUMN SOCIAL MATRIX LAYOUT ENFORCEMENTS
+   RESPONSIVE SCALING ADAPTATIONS (PC, TABLET, MOBILE)
    ========================================================================== */
 
-/* Structural Container Optimization */
-.social-matrix-row-three {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 perfect symmetrical blocks */
-    gap: 1.5rem;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-/* Card layout column flexibility blocks */
-.social-block-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 220px;
-    background: var(--surface-dark);
-    border: 1px solid var(--surface-border);
-    border-radius: 8px;
-    padding: 1.5rem;
-}
-
-.column-header-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-
-.column-block-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.column-block-desc {
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.nested-link-stack,
-.pricing-action-block {
-    width: 100%;
-    margin-top: auto; /* Pin button alignments uniformly across cards */
-}
-
-/* TABLET SYSTEM SCALING RULES (Collapses into 2-columns with bottom card stretching) */
-@media (max-width: 992px) {
-    .social-matrix-row-three {
-        grid-template-columns: repeat(2, 1fr) !important;
+@media (max-width: 768px) {
+    .clean-social-links-bar {
+        gap: 2.5rem;
     }
-    .network-facebook-stack {
-        grid-column: span 2; /* Stretches the FB card nicely across full layout on tablets */
+    .minimal-social-icon-link {
+        min-width: 120px;
+        padding: 1rem;
+    }
+    .social-platform-name {
+        font-size: 1rem;
     }
 }
 
-/* MOBILE PHONE SYSTEM SCALING RULES (Stacks linearly into full-width cards) */
 @media (max-width: 576px) {
-    .social-matrix-row-three {
-        grid-template-columns: repeat(1, 1fr) !important;
-        gap: 1rem;
+    .clean-social-links-bar {
+        flex-direction: column; /* Safely collapses horizontally squeezed lines into rows on mobile */
+        gap: 1.25rem;
+        max-width: 260px;
     }
-    .network-facebook-stack {
-        grid-column: span 1;
-    }
-    .social-block-column {
-        padding: 1.25rem;
-        min-height: auto;
+    .minimal-social-icon-link {
+        width: 100%;
+        background: var(--surface-dark); /* Tech framing layout just to guide mobile touch interactions */
+        border: 1px solid var(--surface-border);
+        padding: 1.25rem 1rem;
     }
 }
-
