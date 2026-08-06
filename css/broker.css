@@ -127,23 +127,23 @@
 
 /* Premium Gold Voltage Luminescence Engine */
 .broker-caption-text {
-    font-weight: 700 !important; /* Forces a strong bold text weight */
-    color: #FFD700 !important;   /* Sets the base text color to premium gold */
-    animation: goldGlowPulse 4s infinite ease-in-out;
+    font-weight: 800 !important; /* Maximizes text thickness for ultimate readability */
+    color: #FFD700 !important;   /* Hardcoded solid pure gold tone (No gradients) */
+    display: block;
+    animation: goldGlowPulse 3s infinite ease-in-out;
 }
 
 @keyframes goldGlowPulse {
     0% { 
-        color: #FFD700;
-        text-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+        transform: scale(1);
     }
     50% { 
-        color: #FFF099; /* Lightens slightly at peak pulse for a true liquid gold effect */
-        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        text-shadow: 0 0 16px rgba(255, 215, 0, 0.65); /* Amplifies glowing field thickness at peak */
+        transform: scale(1.01); /* Micro tactile lift to grab immediate conversion focus */
     }
     100% { 
-        color: #FFD700;
-        text-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+        transform: scale(1);
     }
 }
-
