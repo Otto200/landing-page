@@ -200,3 +200,96 @@
     .ecosystem-app-focus-card { grid-column: span 1; }
     .app-focus-inner-padding { padding: 1rem; }
 }
+
+
+
+/* ==========================================================================
+   HIGHLY INTERACTIVE GREEN FILLED ACTION BUTTON OVERRIDES
+   ========================================================================== */
+
+/* Variant 1: Filled TikTok Row Button Link */
+.nested-social-row.filled-social-btn {
+    background: var(--primary-neon) !important;
+    color: var(--bg-color) !important; /* Forces high-contrast deep black text readability */
+    padding: 0.85rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-neon);
+    transition: all 0.15s var(--transition-fast);
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.nested-social-row.filled-social-btn .handle-text {
+    color: rgba(0, 0, 0, 0.6) !important; /* Clean contrast adaptation for handle track text */
+    margin-left: 6px;
+}
+
+.nested-social-row.filled-social-btn .svg-icon {
+    fill: var(--bg-color) !important;
+}
+
+.nested-social-row.filled-social-btn .svg-arrow {
+    stroke: var(--bg-color) !important;
+}
+
+/* Hover Inverse Action States */
+.nested-social-row.filled-social-btn:hover {
+    background: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 20px var(--primary-neon) !important;
+    transform: translateY(-2px);
+}
+
+.nested-social-row.filled-social-btn:hover .handle-text {
+    color: var(--text-muted) !important;
+}
+
+.nested-social-row.filled-social-btn:hover .svg-icon {
+    fill: var(--primary-neon) !important;
+}
+
+.nested-social-row.filled-social-btn:hover .svg-arrow {
+    stroke: var(--primary-neon) !important;
+}
+
+
+/* Variant 2: Filled WhatsApp Broadcast Anchor Button */
+.btn-broadcast-action.filled-whatsapp-btn {
+    background: var(--primary-neon) !important;
+    color: var(--bg-color) !important;
+    font-weight: 600 !important;
+    border-color: var(--primary-neon) !important;
+    box-shadow: 0 4px 15px var(--primary-glow) !important;
+    width: 100%;
+    padding: 0.85rem 1.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-broadcast-action.filled-whatsapp-btn .svg-btn-icon {
+    fill: var(--bg-color) !important;
+    width: 18px;
+    height: 18px;
+}
+
+/* Hover Inverse Action States */
+.btn-broadcast-action.filled-whatsapp-btn:hover {
+    background: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 20px var(--primary-neon) !important;
+    transform: translateY(-2px);
+}
+
+.btn-broadcast-action.filled-whatsapp-btn:hover .svg-btn-icon {
+    fill: var(--primary-neon) !important;
+}
+
+/* Universal Touch Tapping Compression Rules */
+.nested-social-row.filled-social-btn:active,
+.btn-broadcast-action.filled-whatsapp-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 8px var(--primary-neon) !important;
+}
+
