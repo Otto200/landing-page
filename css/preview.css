@@ -300,3 +300,39 @@
     }
 }
 
+
+
+/* Green Filled Button Variant */
+.ecosystem-portal-btn.filled-green {
+    background: var(--primary-neon) !important;
+    color: var(--bg-color) !important; /* Forces black text contrast against neon background */
+    font-weight: 600 !important;
+    box-shadow: 0 0 20px var(--primary-glow) !important;
+}
+
+/* Filled Hover Inverse State Animation */
+.ecosystem-portal-btn.filled-green:hover {
+    background: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 25px var(--primary-neon) !important;
+    transform: translateY(-2px);
+}
+
+/* Active Press Transition Alignment */
+.ecosystem-portal-btn.filled-green:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px var(--primary-neon) !important;
+}
+
+/* Center and Mobile Span Support Layouts */
+.portal-click-wrapper {
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .portal-click-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
