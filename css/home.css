@@ -349,3 +349,25 @@
         padding: 0 20px;
     }
 }
+
+
+/* ==========================================================================
+   HERO TEXT ENGINE — ISOLATED CATCHPHRASE HIGHLIGHT
+   ========================================================================== */
+
+.hero-subheadline .hero-catchphrase {
+    display: inline-block; /* Enforces separate layout rendering mechanics */
+    font-weight: 800 !important; /* Maximizes font thickness for sharp standout focus */
+    color: #FFD700 !important;   /* Sets color to solid signature premium gold */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); /* Soft, intense voltage ambient shine */
+    letter-spacing: -0.01em;
+    margin-left: 4px;
+    animation: goldPulseFade 3s infinite ease-in-out;
+}
+
+/* Micro-animation to keep the gold catching attention without moving the layout */
+@keyframes goldPulseFade {
+    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); }
+    50% { text-shadow: 0 0 18px rgba(255, 215, 0, 0.75); }
+    100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); }
+}
