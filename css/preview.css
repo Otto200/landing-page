@@ -210,3 +210,93 @@
     50% { opacity: 1; }
     100% { opacity: 0.5; }
 }
+
+
+/* ==========================================================================
+   INTERACTIVE PORTAL ACCESS DESIGN (BLOCK BELOW CAROUSEL SLIDES)
+   ========================================================================== */
+.ecosystem-action-dock {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.4) 100%);
+    border-radius: 12px;
+}
+
+/* Simulated Secure Gateway Indicator */
+.terminal-sync-status {
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator-light {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-neon);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 6px var(--primary-neon);
+}
+
+/* Premium High-Response Button Structural Overrides */
+.ecosystem-portal-btn {
+    padding: 1rem 2.5rem !important; /* Forces thick dense footprint visibility */
+    font-size: 1rem !important;
+    letter-spacing: 0.06em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-color: var(--primary-neon) !important;
+    position: relative;
+    z-index: 5;
+}
+
+/* Interactive Voltage Wave Effect on Hover */
+.ecosystem-portal-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: none;
+}
+
+.ecosystem-portal-btn:hover::before {
+    left: 100%;
+    transition: all 0.6s var(--transition-fast);
+}
+
+/* Layout Padding Adjustment for Mobile Viewports */
+@media (max-width: 600px) {
+    .ecosystem-action-dock {
+        margin-top: 2rem;
+        padding: 1.5rem 1rem;
+    }
+    .ecosystem-portal-btn {
+        width: 100%; /* Spans full touch width layout for easier terminal tapping */
+        padding: 1rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+
+
+
+.portal-click-wrapper {
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .portal-click-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
