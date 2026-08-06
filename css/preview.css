@@ -1,125 +1,165 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 4: MANUAL NAVIGATION CAROUSEL VIEWPORT DESIGN
+   BANKBUGS|FX SECTION 5: FLEXIBLE HORIZONTAL CAROUSEL VIEWPORT
    ========================================================================== */
 .playbook-preview-section {
-    padding: 5rem 1rem;
+    padding: 6rem 1rem;
+    position: relative;
     border-top: 1px solid var(--surface-border);
-    position: relative;
+    overflow: hidden; /* Prevents container layout spilling out */
 }
 
-.playbook-header { margin-bottom: 3rem; }
-
-/* Carousel Housing Window */
-.carousel-outer-shell {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 3rem; 
+.playbook-header {
+    margin-bottom: 4rem;
 }
 
-/* Horizontal Viewport Container */
-.carousel-scroll-viewport {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory; /* Premium mobile touch snapping friction */
-    padding: 1.5rem 0.5rem;
-}
-
-.carousel-scroll-viewport::-webkit-scrollbar { display: none; }
-
-/* Single Slide Grid Column Parameters */
-.carousel-slide-item.phone-preview-column {
-    flex-shrink: 0;
-    width: calc(33.333% - 1.34rem); /* Formats exactly three cards concurrently on desktop screens */
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+.text-center {
     text-align: center;
 }
 
-/* 🕹️ Manual Clicking Desktop Arrows */
-.carousel-control-btn {
-    position: absolute;
-    top: 35%;
-    transform: translateY(-50%);
-    background: rgba(10, 10, 10, 0.9);
-    border: 1px solid var(--surface-border);
-    color: var(--primary-neon);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 20;
-    display: flex;
+.playbook-badge {
+    background: rgba(0, 255, 0, 0.03);
+    border: 1px solid rgba(0, 255, 0, 0.15);
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    transition: all 0.15s ease;
+    gap: 8px;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1.25rem;
 }
 
-.carousel-control-btn:hover {
-    border-color: var(--primary-neon);
-    box-shadow: 0 0 10px var(--primary-glow);
-    background: var(--primary-neon);
-    color: #000000;
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-neon);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--primary-neon);
+    animation: previewPulse 2s infinite;
 }
 
-.carousel-control-btn:active { transform: translateY(-50%) scale(0.95); }
-.carousel-control-btn.btn-prev { left: 0; }
-.carousel-control-btn.btn-next { right: 0; }
-
-/* Smartphone Design Mockups */
-.smartphone-frame.mini-frame {
-    width: 220px;
-    height: 360px;
-    border: 8px solid #141414;
-    border-radius: 28px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
-    background: #000000;
-    transition: border-color 0.25s ease;
+.section-headline {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    font-weight: 600;
 }
 
-.carousel-slide-item:hover .smartphone-frame.mini-frame { border-color: var(--primary-neon); }
-.smartphone-frame.focus-frame { border-color: #222; }
-.smartphone-frame.mini-frame .phone-notch { width: 90px; height: 14px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
-.app-internal-view { padding: 1rem 0.75rem; display: flex; flex-direction: column; gap: 1rem; height: 100%; }
-.app-header-bar { border-bottom: 1px solid var(--surface-border); padding-bottom: 0.4rem; }
-.neon-pill { font-size: 0.55rem !important; padding: 0.1rem 0.3rem !important; background: rgba(0, 255, 0, 0.05) !important; }
-
-/* Vector UI Simulator Elements */
-.app-ui-graphic { background: #040404; border: 1px solid var(--surface-border); border-radius: 6px; flex-grow: 1; position: relative; overflow: hidden; padding: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
-.blueprint-line { position: absolute; background: rgba(0, 255, 0, 0.1); }
-.blueprint-line.vertical { width: 1px; height: 100%; left: 35%; }
-.blueprint-line.horizontal { width: 100%; height: 1px; top: 45%; }
-.blueprint-box-target { margin: auto; font-family: var(--font-mono); font-size: 0.65rem; border: 1px dashed var(--primary-neon); padding: 0.25rem 0.5rem; color: var(--primary-neon); background: rgba(0, 255, 0, 0.05); }
-.calc-input-row { border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.25rem; text-align: left; }
-.calc-output-box { margin-top: auto; background: rgba(0, 255, 0, 0.03); border: 1px solid rgba(0, 255, 0, 0.1); padding: 0.5rem 0.25rem; border-radius: 4px; }
-.label-xs { font-size: 0.5rem; letter-spacing: 0.02em; }
-.lot-size-big { font-size: 1rem; font-weight: 700; margin-top: 0.15rem; }
-.session-node { background: #080808; border: 1px solid var(--surface-border); padding: 0.4rem; border-radius: 4px; text-align: left; }
-.active-session { border-color: rgba(0, 255, 0, 0.2); }
-.pulse-pill { font-size: 0.5rem !important; padding: 0.05rem 0.25rem !important; background: var(--primary-neon) !important; color: #000000 !important; font-weight: 700; }
-.dim-pill { font-size: 0.5rem !important; padding: 0.05rem 0.25rem !important; background: transparent !important; color: var(--text-muted) !important; }
-
-/* Text Content blocks descriptions */
-.preview-text-block { max-width: 280px; display: flex; flex-direction: column; gap: 0.5rem; }
-.preview-title { font-size: 1.15rem; font-weight: 600; }
-.preview-desc { font-size: 0.95rem; line-height: 1.4; }
-
-/* RESPONSIVE SCALING ADAPTATIONS */
-@media (max-width: 992px) {
-    .carousel-slide-item.phone-preview-column { width: calc(50% - 1rem); } /* 2 cards on tablet */
+/* 🏎️ Flexible Carousel Track Wrapper */
+.preview-carousel-viewport {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    
+    /* Hardware accelerated mobile friction snapping */
+    scroll-snap-type: x mandatory; 
+    padding: 1.5rem 1rem;
+    
+    /* Hide native scrolls across layout setups */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
-@media (max-width: 576px) {
-    .playbook-preview-section { padding: 3rem 1rem; }
-    .carousel-outer-shell { padding: 0; }
-    .carousel-control-btn { display: none; } /* Hide buttons on phone to let swipe behavior rule */
-    .carousel-slide-item.phone-preview-column { width: 85vw; } /* Single card dominant on mobile focus */
-    .carousel-scroll-viewport { gap: 1rem; }
+.preview-carousel-viewport::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+/* 📱 Responsive Sizing Rules per Screen State */
+
+/* DESKTOP/PC CONFIGURATION (Shows 3 full cards concurrently, 4th peeks out) */
+.ecosystem-swipe-card {
+    flex: 0 0 calc(33.333% - 1rem); 
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 360px;
+    border-radius: 8px;
+    background: var(--surface-dark);
+}
+
+/* LAPTOP & TABLET CONFIGURATION (Shows 2 cards concurrently) */
+@media (max-width: 1024px) {
+    .ecosystem-swipe-card {
+        flex: 0 0 calc(50% - 0.75rem);
+    }
+}
+
+/* MOBILE PHONE CONFIGURATION (Dominant card focus layout) */
+@media (max-width: 600px) {
+    .ecosystem-swipe-card {
+        flex: 0 0 85vw; /* Fills screen perfectly, allowing next card to peek out */
+        scroll-snap-align: center; /* Center snap focus on small screens */
+    }
+    .preview-carousel-viewport {
+        gap: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .section-headline {
+        font-size: 1.85rem;
+    }
+}
+
+/* Internal Card Element Layout Mechanics */
+.card-header-bar {
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 0.75rem;
+    width: 100%;
+}
+
+.neon-pill {
+    font-size: 0.6rem !important;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.card-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.feature-card-title {
+    font-size: 1.35rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.feature-card-intro {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.feature-bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.feature-bullet-list li {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.bullet-glow {
+    width: 4px;
+    height: 4px;
+    background-color: var(--primary-neon);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 6px var(--primary-neon);
+}
+
+@keyframes previewPulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
