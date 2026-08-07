@@ -1,9 +1,9 @@
 /* ==========================================================================
-   BANKBUGS|FX HERO INTERFACE SPECIFICATION (SMARTPHONE MATRIX INTEGRATION)
+   BANKBUGS|FX HERO INTERFACE SPECIFICATION (COMPACT MATRIX)
    ========================================================================== */
 .hero-section {
-    padding: 3rem 1rem 2rem 1rem;
-    min-height: 80vh;
+    padding: 1.5rem 1rem 1rem 1rem; /* COMPACT: Slashed top and bottom vertical padding */
+    min-height: 65vh; /* COMPACT: Brought down from 80vh to bring following content higher */
     display: flex;
     align-items: center;
 }
@@ -12,13 +12,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.25rem;
+    gap: 0.75rem; /* COMPACT: Compressed spacing between head, subhead, and actions */
 }
 
 /* Typography Hierarchy */
 .hero-headline {
     font-size: 2.3rem;
-    line-height: 1.25;
+    line-height: 1.2; /* COMPACT: Tightened line height tracking */
     color: var(--text-main);
 }
 
@@ -32,13 +32,13 @@
 .hero-actions {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem; /* COMPACT: Tightened vertical button gap */
     max-width: 450px;
 }
 
 .hero-actions .btn {
     width: 100%;
-    padding: 0.85rem;
+    padding: 0.55rem; /* COMPACT: Slashed from 0.85rem to reduce raw height footprint */
     text-align: center;
     font-size: 1rem;
     text-decoration: none;
@@ -75,7 +75,7 @@
     display: block;
     font-size: 0.7rem;
     opacity: 0.8;
-    margin-top: 2px;
+    margin-top: 1px; /* COMPACT: Micro padding adjustments */
 }
 
 .hero-trust-anchor {
@@ -85,8 +85,8 @@
 
 /* 📱 High-Density Cyber Smartphone Frame Mockup */
 .smartphone-frame {
-    width: 270px;
-    height: 540px;
+    width: 250px; /* COMPACT: Scaled down from 270px width */
+    height: 460px; /* COMPACT: Slashed height from 540px to maximize vertical space */
     background: #050505;
     border: 10px solid #1a1a1a;
     border-radius: 36px;
@@ -113,13 +113,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.25rem 0.75rem 0.75rem 0.75rem; /* COMPACT: Reduced layout box inset buffers */
 }
 
 .phone-app-header {
     font-size: 0.7rem;
     border-bottom: 1px solid var(--surface-border);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.35rem; /* COMPACT: Slashed element layout padding */
 }
 
 .phone-time {
@@ -138,7 +138,7 @@
 }
 
 .phone-market-data {
-    padding-top: 0.75rem;
+    padding-top: 0.5rem; /* COMPACT: Brought text higher */
 }
 
 .label-sm {
@@ -147,7 +147,7 @@
 }
 
 .price-row {
-    margin-top: 0.25rem;
+    margin-top: 0.15rem; /* COMPACT: Closed technical text gap */
 }
 
 .price-num {
@@ -160,7 +160,7 @@
 .phone-chart-area {
     background: #020202;
     border: 1px solid var(--surface-border);
-    height: 280px;
+    height: 210px; /* COMPACT: Slashed from 280px to save large row heights */
     position: relative;
     overflow: hidden;
 }
@@ -201,7 +201,7 @@
 
 .phone-app-footer {
     border-top: 1px dashed var(--surface-border);
-    padding-top: 0.5rem;
+    padding-top: 0.35rem; /* COMPACT: Compressed vertical margin space */
 }
 
 .footer-text {
@@ -222,34 +222,29 @@
 /* RESPONSIVE SCALING STATIONS */
 @media (max-width: 992px) {
     .hero-headline { font-size: 1.9rem; }
-    .hero-section { padding-top: 1.5rem; }
-    .smartphone-frame { width: 240px; height: 480px; }
-    .phone-chart-area { height: 230px; }
+    .hero-section { padding-top: 1rem; min-height: auto; } /* COMPACT: Removed vh sizing rules on tablets */
+    .smartphone-frame { width: 220px; height: 410px; } /* COMPACT: Tight structural scale */
+    .phone-chart-area { height: 180px; }
 }
-
-
 
 /* ==========================================================================
    SMARTPHONE FRAME SCREENSHOT INTEGRATION REFACTORS
    ========================================================================== */
 
-/* Set internal view to layout vertically with no blank spaces */
 .phone-screen.screenshot-mode {
-    padding: 1.5rem 0 0 0; /* Clear internal left/right padding so image touches frame borders */
+    padding: 1.25rem 0 0 0; /* COMPACT: Matches parent scale reduction */
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
 }
 
-/* Float headers cleanly above image margins */
 .phone-screen.screenshot-mode .phone-app-header {
-    padding: 0 1rem 0.5rem 1rem;
+    padding: 0 0.75rem 0.35rem 0.75rem;
     border-bottom: 1px solid var(--surface-border);
     width: 100%;
 }
 
-/* Dedicated Image Box viewport */
 .phone-image-content-area {
     width: 100%;
     flex-grow: 1;
@@ -261,29 +256,23 @@
     border-bottom: 1px solid var(--surface-border);
 }
 
-/* Force chart screenshot image to scale perfectly without distorting */
 .phone-screenshot-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Uniformly scales and fills your mobile mockup completely */
-    opacity: 0.9;      /* Blends cleanly with the dark theme architecture */
+    object-fit: cover;
+    opacity: 0.9;
 }
 
-/* Bottom footnote wrapper spacing */
 .phone-screen.screenshot-mode .phone-app-footer {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.35rem 0.75rem 0.75rem 0.75rem; /* COMPACT: Closed spacing loop */
     width: 100%;
     background: #050505;
 }
 
-
-
-
-
 /* Container for the overall desktop layout */
 .desktop-frame {
     width: 100%;
-    max-width: 540px; /* Adjust to fit your grid layout beautifully */
+    max-width: 460px; /* COMPACT: Slashed max box boundary from 540px */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -293,18 +282,17 @@
 /* Widescreen Monitor Screen */
 .desktop-screen {
     width: 100%;
-    aspect-ratio: 16 / 10; /* Perfect widescreen layout for desktop trading apps */
-    background: #0f111a; /* Sleek dark theme background */
-    border: 10px solid #1e2235; /* Monitor outer bezel */
+    aspect-ratio: 16 / 10;
+    background: #0f111a;
+    border: 8px solid #1e2235; /* COMPACT: Scaled border down from 10px */
     border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.1); /* Subtle neon glow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-/* Ensure the chart area expands properly horizontally */
 .desktop-screen .phone-image-content-area {
     flex: 1;
     width: 100%;
@@ -315,13 +303,13 @@
 .desktop-screen .phone-screenshot-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Stretches and crops chart nicely across widescreen */
+    object-fit: cover;
 }
 
 /* Hardware Stand Element */
 .desktop-stand {
-    width: 60px;
-    height: 40px;
+    width: 50px; /* COMPACT: Trimmed desktop width specs */
+    height: 30px; /* COMPACT: Brought height down from 40px */
     background: linear-gradient(to bottom, #1e2235, #111422);
     border-left: 2px solid rgba(255, 255, 255, 0.05);
     border-right: 2px solid rgba(255, 255, 255, 0.05);
@@ -329,8 +317,8 @@
 
 /* Hardware Base Element */
 .desktop-base {
-    width: 160px;
-    height: 8px;
+    width: 130px; /* COMPACT: Downsized from 160px base track scale */
+    height: 6px; /* COMPACT: Slimmed height thickness profile */
     background: #1e2235;
     border-radius: 4px 4px 0 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -339,35 +327,36 @@
 /* Responsive fixes for tablets and small laptops */
 @media (max-width: 992px) {
     .desktop-frame {
-        max-width: 440px;
+        max-width: 380px; /* COMPACT: Tight footprint translation */
     }
 }
 
 @media (max-width: 768px) {
     .desktop-frame {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 10px; /* COMPACT: Trimmed edge buffers */
     }
 }
 
 
+
 /* ==========================================================================
-   HERO TEXT ENGINE — ISOLATED CATCHPHRASE HIGHLIGHT
+   HERO TEXT ENGINE — ISOLATED CATCHPHRASE HIGHLIGHT (COMPACT)
    ========================================================================== */
 
 .hero-subheadline .hero-catchphrase {
-    display: inline-block; /* Enforces separate layout rendering mechanics */
+    display: inline; /* COMPACT: Reverted to native inline tracking to prevent extra block height gaps */
     font-weight: 800 !important; /* Maximizes font thickness for sharp standout focus */
     color: #FFD700 !important;   /* Sets color to solid signature premium gold */
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); /* Soft, intense voltage ambient shine */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.45); /* COMPACT: Tightened voltage shine field */
     letter-spacing: -0.01em;
-    margin-left: 4px;
+    margin-left: 3px; /* COMPACT: Micro space adjustment */
     animation: goldPulseFade 3s infinite ease-in-out;
 }
 
 /* Micro-animation to keep the gold catching attention without moving the layout */
 @keyframes goldPulseFade {
-    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); }
-    50% { text-shadow: 0 0 18px rgba(255, 215, 0, 0.75); }
-    100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.45); }
+    0% { text-shadow: 0 0 8px rgba(255, 215, 0, 0.45); }
+    50% { text-shadow: 0 0 14px rgba(255, 215, 0, 0.70); } /* COMPACT: Balanced text glow peak */
+    100% { text-shadow: 0 0 8px rgba(255, 215, 0, 0.45); }
 }
