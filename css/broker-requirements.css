@@ -1,0 +1,154 @@
+/* ==========================================================================
+   #BROKER-REQUIREMENTS SECTION STYLES
+   ========================================================================== */
+
+#broker-requirements {
+    padding: 4rem 0;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+/* Section Header Structure */
+.requirements-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.requirements-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+/* Carousel Outer Chassis */
+.requirements-carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Scroll Container with Native Hardware Accel Snap Mechanics */
+.requirements-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 0.25rem 2rem 0.25rem;
+    scrollbar-width: none; /* Hides default tracker on Firefox */
+}
+
+.requirements-carousel::-webkit-scrollbar {
+    display: none; /* Hides default tracker on Chrome/Safari/Edge */
+}
+
+/* Base Card Configurations mapped from Fintech Engine */
+.requirements-card {
+    flex: 0 0 calc(33.333% - 1rem); /* Dynamic PC perfect 3-column split */
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+    border-radius: 6px; /* Uniform rounded system layout */
+}
+
+/* Typography Overrides for Cards */
+.req-card-header {
+    margin-bottom: 1.5rem;
+}
+
+.req-card-num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.req-card-title {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+/* Data Dense Bullet System */
+.req-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.req-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Custom Cyber Matrix Checkmark Icons */
+.req-list li::before {
+    content: "▫";
+    position: absolute;
+    left: 0;
+    color: var(--primary-neon);
+    font-weight: bold;
+}
+
+/* Focus/Highlight Accent Text style within Copy */
+.req-highlight {
+    color: var(--primary-neon);
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+/* Active Control Nav Deck Layout */
+.carousel-controls {
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.carousel-btn {
+    width: 45px;
+    height: 45px;
+    padding: 0; /* Clear baseline values for layout sizing */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   MEDIA QUERY BREAKPOINTS & SCALING ENGINE
+   ========================================================================== */
+
+/* LAPTOP & LARGE TABLET SCALE CONFIGURATION */
+@media (max-width: 1024px) {
+    .requirements-card {
+        flex: 0 0 calc(50% - 0.75rem); /* Drops gracefully into pairs */
+    }
+}
+
+/* SMALL TABLET & SMARTPHONE SCALE CONFIGURATION */
+@media (max-width: 600px) {
+    #broker-requirements {
+        padding: 2.5rem 0;
+    }
+    
+    .requirements-carousel {
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .requirements-card {
+        flex: 0 0 88%; /* Shows preview clip of adjacent card to hint swipe action */
+        min-height: 340px;
+    }
+    
+    .requirements-title {
+        font-size: 1.6rem;
+    }
+    
+    /* Native swiping rules on touch displays make macro PC buttons redundant */
+    .carousel-controls {
+        display: none !important; 
+    }
+}
