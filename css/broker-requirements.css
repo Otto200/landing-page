@@ -1,16 +1,16 @@
 /* ==========================================================================
-   #BROKER-REQUIREMENTS SECTION STYLES
+   #BROKER-REQUIREMENTS SECTION STYLES (COMPACT)
    ========================================================================== */
 
 #broker-requirements {
-    padding: 4rem 0;
+    padding: 2.5rem 0; /* COMPACT: Slashed from 4rem to remove empty layout space */
     position: relative;
     background-color: var(--bg-color);
 }
 
 /* Section Header Structure */
 .requirements-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem; /* COMPACT: Halved spacing beneath main section header */
     text-align: center;
 }
 
@@ -18,7 +18,7 @@
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--text-main);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* COMPACT: Tightened badge tracking gap */
 }
 
 /* Carousel Outer Chassis */
@@ -30,11 +30,11 @@
 /* Scroll Container with Native Hardware Accel Snap Mechanics */
 .requirements-carousel {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem; /* COMPACT: Tightened card tracking track alignment */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding: 1rem 0.25rem 2rem 0.25rem;
+    padding: 0.5rem 0.25rem 1rem 0.25rem; /* COMPACT: Reduced bottom padding buffer */
     scrollbar-width: none; /* Hides default tracker on Firefox */
 }
 
@@ -44,42 +44,42 @@
 
 /* Base Card Configurations mapped from Fintech Engine */
 .requirements-card {
-    flex: 0 0 calc(33.333% - 1rem); /* Dynamic PC perfect 3-column split */
+    flex: 0 0 calc(33.333% - 0.666rem); /* Dynamic PC perfect 3-column split adjusted for 1rem gap */
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 380px;
+    min-height: 290px; /* COMPACT: Reduced from 380px to crush card vertical footprints */
     border-radius: 6px; /* Uniform rounded system layout */
 }
 
 /* Typography Overrides for Cards */
 .req-card-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* COMPACT: Compressed vertical header space */
 }
 
 .req-card-num {
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* COMPACT: Tightened spacing beneath step phase metric */
 }
 
 .req-card-title {
     font-size: 1.3rem;
     color: var(--text-main);
-    line-height: 1.3;
+    line-height: 1.2; /* COMPACT: Sharper text baseline calculation */
 }
 
 /* Data Dense Bullet System */
 .req-list {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem; /* COMPACT: Reduced lower card padding clearance */
 }
 
 .req-list li {
     position: relative;
     padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem; /* COMPACT: Tightened bullet layout linespacing */
     color: var(--text-muted);
     font-size: 0.95rem;
 }
@@ -102,13 +102,13 @@
 
 /* Active Control Nav Deck Layout */
 .carousel-controls {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem; /* COMPACT: Shifted nav control system upward */
     gap: 1rem;
 }
 
 .carousel-btn {
-    width: 45px;
-    height: 45px;
+    width: 40px; /* COMPACT: Scaled buttons slightly down for screen space conservation */
+    height: 40px;
     padding: 0; /* Clear baseline values for layout sizing */
     display: inline-flex;
     align-items: center;
@@ -123,24 +123,24 @@
 /* LAPTOP & LARGE TABLET SCALE CONFIGURATION */
 @media (max-width: 1024px) {
     .requirements-card {
-        flex: 0 0 calc(50% - 0.75rem); /* Drops gracefully into pairs */
+        flex: 0 0 calc(50% - 0.5rem); /* Drops gracefully into pairs adjusted for compact gap */
     }
 }
 
 /* SMALL TABLET & SMARTPHONE SCALE CONFIGURATION */
 @media (max-width: 600px) {
     #broker-requirements {
-        padding: 2.5rem 0;
+        padding: 1.75rem 0; /* COMPACT: Slashed micro layout block margins */
     }
     
     .requirements-carousel {
-        gap: 1rem;
-        padding-bottom: 1.5rem;
+        gap: 0.75rem; /* COMPACT: Matches your standard micro grid gap spacing */
+        padding-bottom: 0.75rem;
     }
 
     .requirements-card {
-        flex: 0 0 88%; /* Shows preview clip of adjacent card to hint swipe action */
-        min-height: 340px;
+        flex: 0 0 85%; /* Shows preview clip of adjacent card to hint swipe action */
+        min-height: 270px; /* COMPACT: Tight structural scale adaptation for small devices */
     }
     
     .requirements-title {
