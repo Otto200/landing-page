@@ -1,0 +1,181 @@
+/* ==========================================================================
+   BANKBUGS|FX COMPACT WELCOME GATEWAY MATRIX INTERFACE
+   ========================================================================== */
+
+#welcome-gateway-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Central Workspace Inset Frame Chassis Box */
+.gateway-chassis {
+    width: 100%;
+    max-width: 500px;
+    background: #040404 !important; /* Forces solid dark high-contrast backdrop layer */
+    border: 1px solid var(--surface-border);
+    padding: 1.5rem !important; /* Compact container interior bounds */
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* Snaps content tracks firmly together */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 0, 0.03);
+    border-radius: 8px;
+}
+
+/* Top System Status Panel Linkages */
+.gateway-terminal-header {
+    border-bottom: 1px dashed var(--surface-border);
+    padding-bottom: 0.75rem;
+}
+
+.system-node-id {
+    display: flex;
+    align-items: center;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-neon);
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 8px var(--primary-neon);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* Branding Content Block Elements */
+.gateway-brand-core {
+    text-align: center;
+}
+
+.gateway-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.gateway-tagline {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+/* Micro-Grid Technical Parameters Row */
+.gateway-quick-metrics {
+    background: #080808;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    gap: 0.5rem !important; /* Crushes extra cell spaces directly */
+}
+
+.metric-box {
+    text-align: center;
+    border-right: 1px solid var(--surface-border);
+}
+
+.metric-box:last-child {
+    border-right: none; /* Strips final border track to prevent bleed artifacts */
+}
+
+.metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.15rem;
+}
+
+.metric-value {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Tactical Conversion Action Button Mechanics Layout */
+.gateway-action-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gateway-action-deck .btn {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+}
+
+.btn-gateway-primary {
+    background: var(--primary-neon);
+    color: #000000 !important;
+    font-weight: 700;
+    border: 1px solid var(--primary-neon);
+}
+
+.btn-gateway-primary:hover {
+    background: transparent !important;
+    color: var(--primary-neon) !important;
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.gateway-dual-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-gateway-secondary {
+    font-size: 0.8rem !important; /* Slightly scales down textual scale for secondary targets */
+    padding: 0.6rem !important;
+}
+
+/* Bottom Footer Technical Info Track */
+.gateway-terminal-footer {
+    text-align: center;
+    border-top: 1px solid var(--surface-border);
+    padding-top: 0.75rem;
+}
+
+.gateway-terminal-footer p {
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   SMARTPHONE SMART RESPONSIVE MICRO ADAPTER CODES
+   ========================================================================== */
+@media (max-width: 576px) {
+    #welcome-gateway-container {
+        padding: 0.5rem;
+    }
+    
+    .gateway-chassis {
+        padding: 1rem !important; /* Drops spatial margins on tiny viewport panels */
+        gap: 1rem;
+    }
+    
+    .gateway-logo {
+        font-size: 1.8rem;
+    }
+    
+    .gateway-tagline {
+        font-size: 0.88rem;
+    }
+
+    .gateway-dual-actions {
+        flex-direction: column; /* Stacks button footprints on narrow display screen arrays */
+        gap: 0.5rem;
+    }
+}
