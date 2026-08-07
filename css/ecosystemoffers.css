@@ -1,22 +1,22 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 5: ECOSYSTEM VALUE ANCHOR ENGINE
+   BANKBUGS|FX SECTION 5: ECOSYSTEM VALUE ANCHOR ENGINE (COMPACT)
    ========================================================================== */
 .ecosystem-pricing-section {
-    padding: 5rem 1rem;
+    padding: 2.5rem 1rem; /* COMPACT: Slashed from 5rem to minimize empty space */
     border-top: 1px solid var(--surface-border);
 }
 
 .ecosystem-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem; /* COMPACT: Halved spacing beneath section header */
 }
 
 .ecosystem-badge {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* COMPACT: Closed gap beneath badge */
 }
 
 /* Pricing Grid Structural Anchors */
 .pricing-matrix-row {
-    gap: 2rem;
+    gap: 1.25rem; /* COMPACT: Compressed spacing between columns */
     max-width: 960px;
     margin: 0 auto;
 }
@@ -32,11 +32,11 @@
 }
 
 .card-inner-content {
-    padding: 2rem 1.5rem;
+    padding: 1.25rem 1rem; /* COMPACT: Reduced text inset bounding boxes */
     display: flex;
     flex-direction: column;
     height: 100%;
-    gap: 1.75rem;
+    gap: 1rem; /* COMPACT: Tightened card item flow stacks */
 }
 
 /* 🌟 Golden Pricing Card Specific Styles */
@@ -58,7 +58,7 @@
     font-size: 0.65rem;
     font-weight: 700;
     text-align: center;
-    padding: 0.35rem 0;
+    padding: 0.25rem 0; /* COMPACT: Closed down badge height footprint */
     letter-spacing: 0.05em;
 }
 
@@ -66,7 +66,7 @@
 .pricing-title {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* COMPACT: Snapped closer to price display */
 }
 
 .pricing-price-display {
@@ -97,13 +97,13 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.5rem; /* COMPACT: Tightened linespacing between data points */
     flex-grow: 1; /* Pushes the buttons below flush to align cards perfectly */
 }
 
 .pricing-bullet-list li {
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.3; /* COMPACT: Compressed vertical baseline layout */
     display: flex;
     gap: 0.5rem;
     align-items: flex-start;
@@ -126,7 +126,7 @@
 /* Buttons Mechanics for Pricing Options */
 .pricing-action-block .btn {
     width: 100%;
-    padding: 0.9rem;
+    padding: 0.6rem; /* COMPACT: Reduced padding depth for a sleek tactical style */
     text-align: center;
     font-size: 0.95rem;
     text-decoration: none;
@@ -159,21 +159,21 @@
 }
 
 /* RESPONSIVE LAYOUT MATRIX SUB-STATIONS */
-@media (max-width: 100%) {
+@media (max-width: 992px) { /* FIX: Swapped 100% boundary to proper breakpoints */
     .pricing-matrix-row {
-        gap: 1.5rem;
+        gap: 1rem;
     }
 }
 
-@media (max-width: 100%) {
-    .ecosystem-pricing-section { padding: 3rem 1rem; }
-    .card-inner-content { padding: 1.5rem 1rem; gap: 1.25rem; }
+@media (max-width: 768px) { /* FIX: Set tablet adaptive scaling bounds */
+    .ecosystem-pricing-section { padding: 1.75rem 1rem; }
+    .card-inner-content { padding: 1rem; gap: 1rem; }
     .pricing-price-display { font-size: 1.8rem; }
     .pricing-bullet-list li { font-size: 0.9rem; }
 }
 
 /* ==========================================================================
-   PURE CSS TARGET MODAL INFRASTRUCTURE
+   PURE CSS TARGET MODAL INFRASTRUCTURE (COMPACT)
    ========================================================================== */
 .modal-overlay {
     position: fixed;
@@ -207,13 +207,13 @@
     box-shadow: 0 0 45px rgba(255, 215, 0, 0.2);
     border-radius: 8px;
     width: 100%;
-    max-width: 500px;
-    max-height: 90vh; /* Prevents overflow clipping on small screens */
+    max-width: 480px;
+    max-height: 92vh; /* COMPACT: Maximized vertical window viewport tracking layout */
     overflow-y: auto;  /* Allows scrolling inside modal if window is tight */
-    padding: 2.5rem 2rem;
+    padding: 1.5rem; /* COMPACT: Slashed from 2.5rem 2rem to prevent off-screen overflow */
     position: relative;
-    margin: 1.5rem;
-    transform: translateY(-20px);
+    margin: 1rem;
+    transform: translateY(-15px);
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -235,10 +235,10 @@
 
 .modal-close-btn {
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 0.75rem; /* COMPACT: Pushed outward into corner space */
+    right: 1rem;
     color: #777777;
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* COMPACT: Downscaled dimension tracking */
     text-decoration: none;
     line-height: 1;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -251,47 +251,47 @@
 }
 
 .modal-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* COMPACT: Micro header downscale */
     color: #ffffff;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.25rem;
     letter-spacing: -0.01em;
 }
 
 .modal-header p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: #888888;
-    line-height: 1.4;
+    line-height: 1.35;
 }
 
 /* Onboarding Conversion Steps Engine */
 .requirements-checklist {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0;
+    margin: 1rem 0; /* COMPACT: Slashed top/bottom buffer space */
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 0.75rem; /* COMPACT: Grouped process rows tightly */
     border-top: 1px solid #141414;
     border-bottom: 1px solid #141414;
-    padding: 1.25rem 0;
+    padding: 0.85rem 0; /* COMPACT: Compressed bounding box line height */
 }
 
 .requirements-checklist li {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.1rem;
 }
 
 .req-title {
     color: #ffd700;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
 .req-desc {
     color: #aaaaaa;
-    font-size: 0.85rem;
-    line-height: 1.45;
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 /* 📊 Live Price Widget Alignment Container */
@@ -303,8 +303,8 @@
     background: #080808;
     border: 1px solid #141414;
     border-radius: 6px;
-    padding: 1.5rem 1rem;
-    margin-bottom: 1.75rem;
+    padding: 1rem; /* COMPACT: Trimmed internal padding footprint */
+    margin-bottom: 1rem; /* COMPACT: Snapped to bottom components */
 }
 
 .widget-header-tag {
@@ -312,7 +312,7 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     color: #555555;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* COMPACT: Shrunk space below badge */
 }
 
 .modal-widget-wrapper iframe {
@@ -324,12 +324,12 @@
 .modal-redirect-block {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.5rem; /* COMPACT: Shrunk spacer block gap height */
     text-align: center;
 }
 
 .redirect-warning-text {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     color: #555555;
     line-height: 1.3;
 }
