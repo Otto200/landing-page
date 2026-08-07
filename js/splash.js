@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.getElementById('progress-bar');
     const statusTerminal = document.getElementById('status-terminal');
-    const homeUrl = 'home.html';
+    const homeUrl = 'welcome.html';
     
     const totalDuration = 5000; // 5 seconds metric execution
     const intervalTick = 50; 
