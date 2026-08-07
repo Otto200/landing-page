@@ -1,13 +1,13 @@
 /* ==========================================================================
-   CLEAN VERTICAL ICON STACK BAR (CENTERED OVERRIDE LOGIC)
+   CLEAN VERTICAL ICON STACK BAR (COMPACT OVERRIDE LOGIC)
    ========================================================================== */
 .social-follow-section {
-    padding: 5rem 1rem;
+    padding: 2.5rem 1rem; /* COMPACT: Slashed from 5rem to avoid dead space */
     position: relative;
 }
 
 .social-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.25rem; /* COMPACT: Compressed vertical header space */
 }
 
 /* Row wrapper container centering engine */
@@ -15,10 +15,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem; /* Spacious spacing framework across large desktop environments */
+    gap: 1.5rem; /* COMPACT: Reduced from 5rem to cluster icons tightly on desktop */
     width: 100%;
     max-width: 960px;
-    margin: 2rem auto 0 auto;
+    margin: 1rem auto 0 auto; /* COMPACT: Tightened upper block spacing */
 }
 
 /* Individual link item card block formatting */
@@ -27,18 +27,18 @@
     flex-direction: column; /* Stacks text directly beneath icon vector paths */
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 8px; /* COMPACT: Shrunk space between vector and text */
     text-decoration: none;
     color: var(--text-muted);
-    padding: 1.25rem 2rem;
-    border-radius: 12px;
-    min-width: 150px;
+    padding: 0.75rem 1.25rem; /* COMPACT: Slimmed button cell dimensions */
+    border-radius: 8px; /* COMPACT: Swapped 12px for system-matching 8px track */
+    min-width: 130px; /* COMPACT: Reduced baseline box boundary footprint */
     transition: all 0.2s var(--transition-fast);
 }
 
 .social-vector-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px; /* COMPACT: Scaled down slightly from 32px */
+    height: 28px;
     fill: var(--text-muted);
     transition: fill 0.2s var(--transition-fast), transform 0.2s var(--transition-fast);
 }
@@ -53,7 +53,7 @@
 
 .social-platform-name {
     font-family: var(--font-sans);
-    font-size: 1.15rem;
+    font-size: 1.05rem; /* COMPACT: Micro-scaled text baseline */
     font-weight: 600;
     letter-spacing: -0.01em;
 }
@@ -63,12 +63,12 @@
     background-color: var(--primary-neon) !important;
     color: var(--bg-color) !important; /* Flips text tone to dark contrast color tracking */
     box-shadow: 0 0 25px var(--primary-glow);
-    transform: translateY(-4px);
+    transform: translateY(-2px); /* COMPACT: Subtle 2px lift matches system standard */
 }
 
 .minimal-social-icon-link:hover .social-vector-icon {
     fill: var(--bg-color) !important; /* Flips icon stroke to dark contrast matching color */
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 /* Physical Touch State Press Compression */
@@ -82,46 +82,49 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
+    .social-follow-section {
+        padding: 2rem 1rem; /* COMPACT: Tight adaptive height formatting */
+    }
     .clean-social-links-bar {
-        gap: 2.5rem; /* Compresses gap size constraints safely on medium displays */
+        gap: 1rem; /* COMPACT: Tight alignment padding */
     }
     .minimal-social-icon-link {
-        min-width: 120px;
-        padding: 1rem;
+        min-width: 110px;
+        padding: 0.6rem 1rem;
     }
     .social-platform-name {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
 /* MOBILE PHONE STATE TUNING (Enforces ultra-dense horizontal layout alignment) */
 @media (max-width: 576px) {
     .social-follow-section {
-        padding: 3rem 0.5rem; /* Reduces sectional height gaps to save screen workspace */
+        padding: 1.5rem 0.5rem; /* COMPACT: Slashed micro layout block margins to avoid scrolling */
     }
     .social-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     .clean-social-links-bar {
         flex-direction: row !important; /* LOCKS HORIZONTAL ALIGNMENT (Stops column stacking layout drops) */
         justify-content: space-evenly;
         gap: 0.5rem; /* Compresses padding gap width between the three channels */
         max-width: 100%;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
     }
     .minimal-social-icon-link {
         flex: 1; /* Distributes tap targets perfectly and evenly across width sizes */
         min-width: auto; /* Strips width constraints to prevent mobile overflow clipping */
-        padding: 0.75rem 0.25rem;
-        gap: 8px; /* Tightens space between vector icon and platform text */
+        padding: 0.6rem 0.25rem; /* COMPACT: Tight cell padding */
+        gap: 6px; /* COMPACT: Snapped icon and text close together */
         background: var(--surface-dark); /* Framed border guides to protect easy mobile touching */
         border: 1px solid var(--surface-border);
     }
     .social-vector-icon {
-        width: 24px; /* Decreases scale to save viewport space on mobile lines */
-        height: 24px;
+        width: 22px; /* COMPACT: Max space savings optimization */
+        height: 22px;
     }
     .social-platform-name {
-        font-size: 0.85rem; /* Compact layout scale optimized for small screens */
+        font-size: 0.8rem; /* Compact layout scale optimized for small screens */
     }
 }
