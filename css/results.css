@@ -1,30 +1,30 @@
 /* ==========================================================================
-   BANKBUGS|FX SECTION 2: RESULTS & INFINITE LOOP AUTO-SLIDER ARCHITECTURE
+   BANKBUGS|FX SECTION 2: RESULTS & INFINITE LOOP AUTO-SLIDER ARCHITECTURE (COMPACT)
    ========================================================================== */
 :root {
-    --card-width: 290px;
-    --card-gap: 1.5rem;
+    --card-width: 270px; /* COMPACT: Downscaled from 290px to minimize grid width drag */
+    --card-gap: 0.75rem; /* COMPACT: Slashed from 1.5rem to pull slider tracking close */
     --total-cards: 5;
 }
 
 .proof-flex-section {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem; /* COMPACT: Slashed from 4rem to pull following sections upward */
     border-top: 1px solid var(--surface-border);
     overflow: hidden; /* Guards page width bounds against track leakage */
 }
 
 .proof-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem; /* COMPACT: Halved vertical spacer clearance gap */
 }
 
 .proof-badge {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* COMPACT: Shrunk space directly below badge tracking */
 }
 
 .section-headline {
     font-size: 2rem;
-    line-height: 1.3;
+    line-height: 1.2; /* COMPACT: Sharper text typography balance */
     max-width: 700px;
     margin: 0 auto;
 }
@@ -34,7 +34,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem; /* COMPACT: Compressed spacing directly above caption texts */
     /* Soft gradient vignette shadows fading out edges like premium trading platforms */
     mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
@@ -59,12 +59,12 @@
 .proof-card {
     flex-shrink: 0;
     width: var(--card-width);
-    padding: 0.5rem !important;
+    padding: 0.4rem !important; /* COMPACT: Micro padding adjustments inside frames */
     background: #0a0a0a !important;
     border: 1px solid var(--surface-border);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.35rem; /* COMPACT: Snapped track text directly below image box viewports */
     border-radius: 6px;
     /* Removed heavy ease transitions and made color shifts instant */
     transition: border-color 0.1s linear, box-shadow 0.1s linear; 
@@ -103,7 +103,7 @@
 }
 
 .proof-card-footer {
-    padding: 0.25rem 0.5rem;
+    padding: 0.15rem 0.25rem 0 0.25rem; /* COMPACT: Tight structural padding boundaries */
     font-family: var(--font-mono);
 }
 
@@ -116,12 +116,13 @@
 .proof-caption-block {
     max-width: 650px;
     margin: 0 auto;
+    text-align: center; /* Balanced presentation layout alignment */
 }
 
 .proof-caption-text {
     font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.4; /* COMPACT: Highly optimized data rows linespacing */
 }
 
 /* ==========================================================================
@@ -141,12 +142,20 @@
 @media (max-width: 992px) {
     .section-headline { font-size: 1.7rem; }
     /* FIXED CSS VARIABLE SYNTAX ERROR TO STABILIZE RESPONSIVE SMOOTHNESS */
-    :root { --card-width: 260px; } 
+    :root { 
+        --card-width: 230px; /* COMPACT: Brought down from 260px on medium viewport arrays */
+        --card-gap: 0.5rem;
+    } 
 }
 
 @media (max-width: 576px) {
-    .proof-flex-section { padding: 3rem 1rem; }
+    .proof-flex-section { 
+        padding: 1.25rem 1rem; /* COMPACT: Slashed micro layout block margins to completely wipe out scrolling gaps */
+    }
     .section-headline { font-size: 1.5rem; }
     .proof-caption-text { font-size: 0.95rem; }
+    :root {
+        --card-width: 180px; /* COMPACT: Ultra-tight scale alignment matching smaller smartphone screens */
+    }
     .proof-slider-window { mask-image: none; -webkit-mask-image: none; } /* Drop masks on mobile to maximize viewport hardware rendering speeds */
 }
